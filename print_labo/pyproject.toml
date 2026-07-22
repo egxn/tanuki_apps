@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "print-labo"
+version = "0.1.0"
+description = "Print Labo"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "black",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/print_labo"]
