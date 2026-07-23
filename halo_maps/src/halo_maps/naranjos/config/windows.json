@@ -1,0 +1,747 @@
+{
+  "bachillerato": [
+    {
+      "label": "bachillerato_ventana_1_piso_1",
+      "num_ventana": 1,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.062,
+        "y": 46513.688,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_2_piso_1",
+      "num_ventana": 2,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.062,
+        "y": 75789.703,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_3_piso_1",
+      "num_ventana": 3,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 71919.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_4_piso_1",
+      "num_ventana": 4,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 80751.406,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_5_piso_1",
+      "num_ventana": 5,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 89416.844,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_6_piso_1",
+      "num_ventana": 6,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 98480.156,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_7_piso_1",
+      "num_ventana": 7,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 107312.06,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_8_piso_1",
+      "num_ventana": 8,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 115977.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_9_piso_1",
+      "num_ventana": 9,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81025.156,
+        "y": 113580.7,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_1_piso_2",
+      "num_ventana": 1,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.062,
+        "y": 46513.684,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_2_piso_2",
+      "num_ventana": 2,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.062,
+        "y": 75789.703,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_3_piso_2",
+      "num_ventana": 3,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 71919.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_4_piso_2",
+      "num_ventana": 4,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 80751.406,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_5_piso_2",
+      "num_ventana": 5,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 89416.844,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_6_piso_2",
+      "num_ventana": 6,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 98480.156,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_7_piso_2",
+      "num_ventana": 7,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 107312.06,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_8_piso_2",
+      "num_ventana": 8,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.53,
+        "y": 115977.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_9_piso_2",
+      "num_ventana": 9,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81025.156,
+        "y": 113580.7,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_10_piso_2",
+      "num_ventana": 10,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104556.63,
+        "y": 54422.156,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_11_piso_2",
+      "num_ventana": 11,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104556.63,
+        "y": 38586.469,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_12_piso_2",
+      "num_ventana": 12,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104968.26,
+        "y": 147258.67,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_13_piso_2",
+      "num_ventana": 13,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104968.26,
+        "y": 131422.97,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_1_piso_3",
+      "num_ventana": 1,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.07,
+        "y": 46513.684,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_2_piso_3",
+      "num_ventana": 2,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81041.07,
+        "y": 75789.703,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_3_piso_3",
+      "num_ventana": 3,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 71919.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_4_piso_3",
+      "num_ventana": 4,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 80751.406,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_5_piso_3",
+      "num_ventana": 5,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 89416.844,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_6_piso_3",
+      "num_ventana": 6,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 98480.156,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_7_piso_3",
+      "num_ventana": 7,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 107312.07,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_8_piso_3",
+      "num_ventana": 8,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104262.54,
+        "y": 115977.5,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_9_piso_3",
+      "num_ventana": 9,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 81025.164,
+        "y": 113580.7,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_10_piso_3",
+      "num_ventana": 10,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104556.63,
+        "y": 54422.156,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_11_piso_3",
+      "num_ventana": 11,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104556.63,
+        "y": 38586.469,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_12_piso_3",
+      "num_ventana": 12,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104968.27,
+        "y": 147258.69,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "bachillerato_ventana_13_piso_3",
+      "num_ventana": 13,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 104968.27,
+        "y": 131422.97,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    }
+  ],
+  "laboratorio": [
+    {
+      "label": "laboratorio_ventana_1_piso_1",
+      "num_ventana": 1,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 49884.082,
+        "y": 36459.012,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_2_piso_1",
+      "num_ventana": 2,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73175.695,
+        "y": 36378.496,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_3_piso_1",
+      "num_ventana": 3,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73487.109,
+        "y": 76094.25,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_4_piso_1",
+      "num_ventana": 4,
+      "piso": 1,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50195.492,
+        "y": 76174.766,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_1_piso_2",
+      "num_ventana": 1,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 28531.791,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_2_piso_2",
+      "num_ventana": 2,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 49884.082,
+        "y": 36459.012,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_3_piso_2",
+      "num_ventana": 3,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 44386.234,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_4_piso_2",
+      "num_ventana": 4,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50790.324,
+        "y": 55575.027,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_5_piso_2",
+      "num_ventana": 5,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50790.324,
+        "y": 68411.031,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_6_piso_2",
+      "num_ventana": 6,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50195.492,
+        "y": 76174.766,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_7_piso_2",
+      "num_ventana": 7,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 88347.727,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_8_piso_2",
+      "num_ventana": 8,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73487.109,
+        "y": 36459.016,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_9_piso_2",
+      "num_ventana": 9,
+      "piso": 2,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73487.109,
+        "y": 76094.25,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_1_piso_3",
+      "num_ventana": 1,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 28531.791,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_2_piso_3",
+      "num_ventana": 2,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 49884.082,
+        "y": 36459.012,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_3_piso_3",
+      "num_ventana": 3,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 44386.234,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_4_piso_3",
+      "num_ventana": 4,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50790.324,
+        "y": 55575.027,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_5_piso_3",
+      "num_ventana": 5,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50790.324,
+        "y": 68411.031,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_6_piso_3",
+      "num_ventana": 6,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50195.492,
+        "y": 76174.766,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_7_piso_3",
+      "num_ventana": 7,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 50125.332,
+        "y": 88347.727,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_8_piso_3",
+      "num_ventana": 8,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73487.109,
+        "y": 36459.016,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    },
+    {
+      "label": "laboratorio_ventana_9_piso_3",
+      "num_ventana": 9,
+      "piso": 3,
+      "z_bottom_m": 0.9,
+      "height_m": 1.0,
+      "svg": {
+        "x": 73487.109,
+        "y": 76094.25,
+        "width": 3433.4609,
+        "height": 4249.4805
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "tejado_3",
+    "path_name": "tejado_3",
+    "kind": "roof",
+    "floor_base": 4,
+    "z_start_bu": 12.4364,
+    "height_bu": 0.2182
+  },
+  {
+    "name": "tejado_2_2",
+    "path_name": "tejado_2_2",
+    "kind": "roof",
+    "floor_base": 3,
+    "z_start_bu": 8.2909,
+    "height_bu": 0.2182
+  },
+  {
+    "name": "tejado_2_1",
+    "path_name": "tejado_2_1",
+    "kind": "roof",
+    "floor_base": 3,
+    "z_start_bu": 8.2909,
+    "height_bu": 0.2182
+  },
+  {
+    "name": "tejado_1",
+    "path_name": "tejado_1",
+    "kind": "roof",
+    "floor_base": 2,
+    "z_start_bu": 4.1455,
+    "height_bu": 0.2182
+  },
+  {
+    "name": "hall_2_piso",
+    "path_name": "hall_2_piso",
+    "kind": "hall",
+    "floor_base": 2,
+    "z_start_bu": 4.1455,
+    "height_bu": 0.2182
+  },
+  {
+    "name": "hall_3_piso",
+    "path_name": "hall_3_piso",
+    "kind": "hall",
+    "floor_base": 3,
+    "z_start_bu": 8.2909,
+    "height_bu": 0.2182
+  }
+]

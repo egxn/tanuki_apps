@@ -1,0 +1,15 @@
+{
+  "floor_pitch_bu": 4.1455,
+  "slab_thickness_bu": 0.2182,
+  "objects": [
+    {
+      "id": "cols",
+      "type": "extrude_circles",
+      "svg_group_id": "g291429",
+      "svg_group_label": "cols",
+      "floors": [1, 2, 3],
+      "gap_top_bu": 0.2182,
+      "segments": 16
+    }
+  ]
+}

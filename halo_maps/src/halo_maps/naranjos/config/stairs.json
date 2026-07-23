@@ -1,0 +1,43 @@
+{
+  "_comment": "Estructura de escaleras. Cada segmento tiene un 'level' flotante: entero = piso, X.5 = intermedio entre piso X y X+1. z_start_bu = (level - 1) * floor_pitch_bu. height_bu para segmentos no finales = 0.5 * floor_pitch_bu; para el último = slab_thickness_bu.",
+  "floor_pitch_bu": 4.1455,
+  "slab_thickness_bu": 0.2182,
+  "staircases": [
+    {
+      "id": 1,
+      "segments": [
+        { "shape": "esc_1_1",          "level": 1.0, "z_start_bu": 0.0,    "height_bu": 0.2182 },
+        { "shape": "esc_1_intermedio_1", "level": 1.5, "z_start_bu": 2.0727, "height_bu": 0.2182 },
+        { "shape": "esc_1_2",          "level": 2.0, "z_start_bu": 4.1455, "height_bu": 0.2182 }
+      ]
+    },
+    {
+      "id": 2,
+      "segments": [
+        { "shape": "esc_2_1",          "level": 1.0, "z_start_bu": 0.0,    "height_bu": 0.2182 },
+        { "shape": "esc_2_intermedio_1", "level": 1.5, "z_start_bu": 2.0727, "height_bu": 0.2182 },
+        { "shape": "esc_2_2",          "level": 2.0, "z_start_bu": 4.1455, "height_bu": 0.2182 }
+      ]
+    },
+    {
+      "id": 3,
+      "segments": [
+        { "shape": "esc_3_1",            "level": 1.0, "z_start_bu": 0.0,    "height_bu": 0.2182 },
+        { "shape": "esc_3_intermedio_1", "level": 1.5, "z_start_bu": 2.0727, "height_bu": 0.2182 },
+        { "shape": "esc_3_2",            "level": 2.0, "z_start_bu": 4.1455, "height_bu": 0.2182 },
+        { "shape": "esc_3_intermedio_2", "level": 2.5, "z_start_bu": 6.2182, "height_bu": 0.2182 },
+        { "shape": "esc_3_3",            "level": 3.0, "z_start_bu": 8.2909, "height_bu": 0.2182 }
+      ]
+    },
+    {
+      "id": 4,
+      "segments": [
+        { "shape": "esc_4_1",          "level": 1.0, "z_start_bu": 0.0,    "height_bu": 0.2182 },
+        { "shape": "esc_4_intermedio_1", "level": 1.5, "z_start_bu": 2.0727, "height_bu": 0.2182 },
+        { "shape": "esc_4_2",          "level": 2.0, "z_start_bu": 4.1455, "height_bu": 0.2182 },
+        { "shape": "esc_4_intermedio_2", "level": 2.5, "z_start_bu": 6.2182, "height_bu": 0.2182 },
+        { "shape": "esc_4_3",          "level": 3.0, "z_start_bu": 8.2909, "height_bu": 0.2182 }
+      ]
+    }
+  ]
+}

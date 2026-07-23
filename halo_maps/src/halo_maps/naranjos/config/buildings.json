@@ -1,0 +1,92 @@
+[
+  {
+  "name": "transicion",
+  "floors": 1,
+  "path_name": "transicion",
+  "floor_height": 2.28,
+  "meta": {
+    "bricks_h": 38
+    }
+  },
+  {
+    "name": "ludoteca",
+    "floor": 1,
+    "path_name": "ludoteca",
+    "floor_height": 2.64,
+    "meta": {
+      "bricks_h": 44
+    }
+  },
+  {
+    "name": "primaria",
+    "floor": 1,
+    "path_name": "primaria",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "arte",
+    "floor": 2,
+    "path_name": "arte",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "secundaria",
+    "floor": 2,
+    "path_name": "secundaria",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "bachillerato",
+    "floor": 3,
+    "path_name": "bachillerato",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "laboratorio",
+    "floor": 3,
+    "path_name": "laboratorio",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "biblioteca",
+    "floor": 2,
+    "path_name": "biblioteca",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "kiosco",
+    "floor": 1,
+    "path_name": "kiosco",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  },
+  {
+    "name": "auditorio",
+    "floor": 1,
+    "path_name": "auditorio",
+    "floor_height": 2.28,
+    "meta": {
+      "bricks_h": 38
+    }
+  }
+]

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="118.33mm" height="50.00mm" viewBox="0 0 118.333 50.000">
+  <title>accordion_tile bellows pattern</title>
+  <rect x="0" y="0" width="118.333" height="50.000" fill="white" />
+  <line x1="13.333" y1="35.000" x2="30.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="45.000" x2="55.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="45.000" x2="13.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="45.000" x2="30.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="45.000" x2="63.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="13.333" y1="35.000" x2="30.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="25.000" x2="55.000" y2="25.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="25.000" x2="13.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="25.000" x2="30.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="25.000" x2="63.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="63.333" y1="35.000" x2="80.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="45.000" x2="105.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="45.000" x2="63.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="45.000" x2="80.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="105.000" y1="45.000" x2="113.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="63.333" y1="35.000" x2="80.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="25.000" x2="105.000" y2="25.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="25.000" x2="63.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="25.000" x2="80.000" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="105.000" y1="25.000" x2="113.333" y2="35.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="13.333" y1="15.000" x2="30.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="25.000" x2="55.000" y2="25.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="25.000" x2="13.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="25.000" x2="30.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="25.000" x2="63.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="13.333" y1="15.000" x2="30.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="5.000" x2="55.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="5.000" x2="13.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="38.333" y1="5.000" x2="30.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="5.000" x2="63.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="63.333" y1="15.000" x2="80.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="25.000" x2="105.000" y2="25.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="25.000" x2="63.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="25.000" x2="80.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="105.000" y1="25.000" x2="113.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="63.333" y1="15.000" x2="80.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="5.000" x2="105.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="55.000" y1="5.000" x2="63.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="88.333" y1="5.000" x2="80.000" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="105.000" y1="5.000" x2="113.333" y2="15.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="45.000" x2="38.333" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="30.000" y1="35.000" x2="63.333" y2="35.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="25.000" x2="38.333" y2="25.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="30.000" y1="35.000" x2="63.333" y2="35.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="55.000" y1="45.000" x2="88.333" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="80.000" y1="35.000" x2="113.333" y2="35.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="55.000" y1="25.000" x2="88.333" y2="25.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="80.000" y1="35.000" x2="113.333" y2="35.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="25.000" x2="38.333" y2="25.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="30.000" y1="15.000" x2="63.333" y2="15.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="5.000" x2="38.333" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="30.000" y1="15.000" x2="63.333" y2="15.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="55.000" y1="25.000" x2="88.333" y2="25.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="80.000" y1="15.000" x2="113.333" y2="15.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="55.000" y1="5.000" x2="88.333" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="80.000" y1="15.000" x2="113.333" y2="15.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="45.000" x2="113.333" y2="45.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="113.333" y1="45.000" x2="113.333" y2="5.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="113.333" y1="5.000" x2="5.000" y2="5.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="5.000" y1="5.000" x2="5.000" y2="45.000" stroke="#000000" stroke-width="0.8" />
+</svg>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170.00mm" height="170.00mm" viewBox="0 0 170.000 170.000">
+  <title>yoshimura_tile bellows pattern</title>
+  <rect x="0" y="0" width="170.000" height="170.000" fill="white" />
+  <line x1="5.000" y1="157.000" x2="21.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="149.000" x2="21.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="157.000" x2="37.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="149.000" x2="37.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="157.000" x2="53.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="149.000" x2="53.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="157.000" x2="69.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="149.000" x2="69.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="157.000" x2="85.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="149.000" x2="85.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="157.000" x2="101.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="149.000" x2="101.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="157.000" x2="117.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="149.000" x2="117.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="157.000" x2="133.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="149.000" x2="133.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="157.000" x2="149.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="149.000" x2="149.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="157.000" x2="165.000" y2="157.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="149.000" x2="165.000" y2="149.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="141.000" x2="21.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="133.000" x2="21.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="141.000" x2="37.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="133.000" x2="37.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="141.000" x2="53.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="133.000" x2="53.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="141.000" x2="69.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="133.000" x2="69.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="141.000" x2="85.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="133.000" x2="85.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="141.000" x2="101.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="133.000" x2="101.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="141.000" x2="117.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="133.000" x2="117.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="141.000" x2="133.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="133.000" x2="133.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="141.000" x2="149.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="133.000" x2="149.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="141.000" x2="165.000" y2="141.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="133.000" x2="165.000" y2="133.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="125.000" x2="21.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="117.000" x2="21.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="125.000" x2="37.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="117.000" x2="37.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="125.000" x2="53.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="117.000" x2="53.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="125.000" x2="69.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="117.000" x2="69.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="125.000" x2="85.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="117.000" x2="85.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="125.000" x2="101.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="117.000" x2="101.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="125.000" x2="117.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="117.000" x2="117.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="125.000" x2="133.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="117.000" x2="133.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="125.000" x2="149.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="117.000" x2="149.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="125.000" x2="165.000" y2="125.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="117.000" x2="165.000" y2="117.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="109.000" x2="21.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="101.000" x2="21.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="109.000" x2="37.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="101.000" x2="37.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="109.000" x2="53.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="101.000" x2="53.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="109.000" x2="69.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="101.000" x2="69.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="109.000" x2="85.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="101.000" x2="85.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="109.000" x2="101.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="101.000" x2="101.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="109.000" x2="117.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="101.000" x2="117.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="109.000" x2="133.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="101.000" x2="133.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="109.000" x2="149.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="101.000" x2="149.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="109.000" x2="165.000" y2="109.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="101.000" x2="165.000" y2="101.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="93.000" x2="21.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="85.000" x2="21.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="93.000" x2="37.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="85.000" x2="37.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="93.000" x2="53.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="85.000" x2="53.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="93.000" x2="69.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="85.000" x2="69.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="93.000" x2="85.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="85.000" x2="85.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="93.000" x2="101.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="85.000" x2="101.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="93.000" x2="117.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="85.000" x2="117.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="93.000" x2="133.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="85.000" x2="133.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="93.000" x2="149.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="85.000" x2="149.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="93.000" x2="165.000" y2="93.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="85.000" x2="165.000" y2="85.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="77.000" x2="21.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="69.000" x2="21.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="77.000" x2="37.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="69.000" x2="37.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="77.000" x2="53.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="69.000" x2="53.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="77.000" x2="69.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="69.000" x2="69.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="77.000" x2="85.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="69.000" x2="85.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="77.000" x2="101.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="69.000" x2="101.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="77.000" x2="117.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="69.000" x2="117.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="77.000" x2="133.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="69.000" x2="133.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="77.000" x2="149.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="69.000" x2="149.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="77.000" x2="165.000" y2="77.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="69.000" x2="165.000" y2="69.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="61.000" x2="21.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="53.000" x2="21.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="61.000" x2="37.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="53.000" x2="37.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="61.000" x2="53.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="53.000" x2="53.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="61.000" x2="69.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="53.000" x2="69.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="61.000" x2="85.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="53.000" x2="85.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="61.000" x2="101.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="53.000" x2="101.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="61.000" x2="117.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="53.000" x2="117.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="61.000" x2="133.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="53.000" x2="133.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="61.000" x2="149.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="53.000" x2="149.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="61.000" x2="165.000" y2="61.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="53.000" x2="165.000" y2="53.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="45.000" x2="21.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="37.000" x2="21.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="45.000" x2="37.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="37.000" x2="37.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="45.000" x2="53.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="37.000" x2="53.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="45.000" x2="69.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="37.000" x2="69.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="45.000" x2="85.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="37.000" x2="85.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="45.000" x2="101.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="37.000" x2="101.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="45.000" x2="117.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="37.000" x2="117.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="45.000" x2="133.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="37.000" x2="133.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="45.000" x2="149.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="37.000" x2="149.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="45.000" x2="165.000" y2="45.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="37.000" x2="165.000" y2="37.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="29.000" x2="21.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="21.000" x2="21.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="29.000" x2="37.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="21.000" x2="37.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="29.000" x2="53.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="21.000" x2="53.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="29.000" x2="69.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="21.000" x2="69.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="29.000" x2="85.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="21.000" x2="85.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="29.000" x2="101.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="21.000" x2="101.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="29.000" x2="117.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="21.000" x2="117.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="29.000" x2="133.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="21.000" x2="133.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="29.000" x2="149.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="21.000" x2="149.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="29.000" x2="165.000" y2="29.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="21.000" x2="165.000" y2="21.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="13.000" x2="21.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="5.000" x2="21.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="13.000" x2="37.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="21.000" y1="5.000" x2="37.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="13.000" x2="53.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="37.000" y1="5.000" x2="53.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="13.000" x2="69.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="53.000" y1="5.000" x2="69.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="13.000" x2="85.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="69.000" y1="5.000" x2="85.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="13.000" x2="101.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="85.000" y1="5.000" x2="101.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="13.000" x2="117.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="101.000" y1="5.000" x2="117.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="13.000" x2="133.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="117.000" y1="5.000" x2="133.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="13.000" x2="149.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="133.000" y1="5.000" x2="149.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="13.000" x2="165.000" y2="13.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="149.000" y1="5.000" x2="165.000" y2="5.000" stroke="#1f77b4" stroke-width="0.6" stroke-dasharray="2,1.5" />
+  <line x1="5.000" y1="157.000" x2="13.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="149.000" x2="21.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="157.000" x2="13.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="165.000" x2="5.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="157.000" x2="29.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="149.000" x2="37.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="157.000" x2="29.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="165.000" x2="21.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="157.000" x2="45.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="149.000" x2="53.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="157.000" x2="45.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="165.000" x2="37.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="157.000" x2="61.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="149.000" x2="69.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="157.000" x2="61.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="165.000" x2="53.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="157.000" x2="77.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="149.000" x2="85.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="157.000" x2="77.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="165.000" x2="69.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="157.000" x2="93.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="149.000" x2="101.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="157.000" x2="93.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="165.000" x2="85.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="157.000" x2="109.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="149.000" x2="117.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="157.000" x2="109.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="165.000" x2="101.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="157.000" x2="125.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="149.000" x2="133.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="157.000" x2="125.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="165.000" x2="117.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="157.000" x2="141.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="149.000" x2="149.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="157.000" x2="141.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="165.000" x2="133.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="157.000" x2="157.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="149.000" x2="165.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="157.000" x2="157.000" y2="165.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="165.000" x2="149.000" y2="157.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="141.000" x2="13.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="133.000" x2="21.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="141.000" x2="13.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="149.000" x2="5.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="141.000" x2="29.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="133.000" x2="37.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="141.000" x2="29.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="149.000" x2="21.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="141.000" x2="45.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="133.000" x2="53.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="141.000" x2="45.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="149.000" x2="37.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="141.000" x2="61.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="133.000" x2="69.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="141.000" x2="61.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="149.000" x2="53.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="141.000" x2="77.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="133.000" x2="85.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="141.000" x2="77.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="149.000" x2="69.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="141.000" x2="93.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="133.000" x2="101.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="141.000" x2="93.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="149.000" x2="85.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="141.000" x2="109.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="133.000" x2="117.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="141.000" x2="109.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="149.000" x2="101.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="141.000" x2="125.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="133.000" x2="133.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="141.000" x2="125.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="149.000" x2="117.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="141.000" x2="141.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="133.000" x2="149.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="141.000" x2="141.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="149.000" x2="133.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="141.000" x2="157.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="133.000" x2="165.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="141.000" x2="157.000" y2="149.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="149.000" x2="149.000" y2="141.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="125.000" x2="13.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="117.000" x2="21.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="125.000" x2="13.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="133.000" x2="5.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="125.000" x2="29.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="117.000" x2="37.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="125.000" x2="29.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="133.000" x2="21.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="125.000" x2="45.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="117.000" x2="53.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="125.000" x2="45.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="133.000" x2="37.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="125.000" x2="61.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="117.000" x2="69.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="125.000" x2="61.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="133.000" x2="53.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="125.000" x2="77.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="117.000" x2="85.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="125.000" x2="77.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="133.000" x2="69.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="125.000" x2="93.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="117.000" x2="101.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="125.000" x2="93.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="133.000" x2="85.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="125.000" x2="109.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="117.000" x2="117.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="125.000" x2="109.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="133.000" x2="101.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="125.000" x2="125.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="117.000" x2="133.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="125.000" x2="125.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="133.000" x2="117.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="125.000" x2="141.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="117.000" x2="149.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="125.000" x2="141.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="133.000" x2="133.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="125.000" x2="157.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="117.000" x2="165.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="125.000" x2="157.000" y2="133.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="133.000" x2="149.000" y2="125.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="109.000" x2="13.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="101.000" x2="21.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="109.000" x2="13.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="117.000" x2="5.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="109.000" x2="29.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="101.000" x2="37.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="109.000" x2="29.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="117.000" x2="21.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="109.000" x2="45.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="101.000" x2="53.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="109.000" x2="45.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="117.000" x2="37.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="109.000" x2="61.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="101.000" x2="69.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="109.000" x2="61.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="117.000" x2="53.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="109.000" x2="77.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="101.000" x2="85.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="109.000" x2="77.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="117.000" x2="69.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="109.000" x2="93.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="101.000" x2="101.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="109.000" x2="93.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="117.000" x2="85.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="109.000" x2="109.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="101.000" x2="117.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="109.000" x2="109.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="117.000" x2="101.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="109.000" x2="125.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="101.000" x2="133.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="109.000" x2="125.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="117.000" x2="117.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="109.000" x2="141.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="101.000" x2="149.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="109.000" x2="141.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="117.000" x2="133.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="109.000" x2="157.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="101.000" x2="165.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="109.000" x2="157.000" y2="117.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="117.000" x2="149.000" y2="109.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="93.000" x2="13.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="85.000" x2="21.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="93.000" x2="13.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="101.000" x2="5.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="93.000" x2="29.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="85.000" x2="37.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="93.000" x2="29.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="101.000" x2="21.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="93.000" x2="45.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="85.000" x2="53.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="93.000" x2="45.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="101.000" x2="37.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="93.000" x2="61.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="85.000" x2="69.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="93.000" x2="61.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="101.000" x2="53.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="93.000" x2="77.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="85.000" x2="85.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="93.000" x2="77.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="101.000" x2="69.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="93.000" x2="93.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="85.000" x2="101.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="93.000" x2="93.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="101.000" x2="85.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="93.000" x2="109.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="85.000" x2="117.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="93.000" x2="109.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="101.000" x2="101.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="93.000" x2="125.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="85.000" x2="133.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="93.000" x2="125.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="101.000" x2="117.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="93.000" x2="141.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="85.000" x2="149.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="93.000" x2="141.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="101.000" x2="133.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="93.000" x2="157.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="85.000" x2="165.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="93.000" x2="157.000" y2="101.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="101.000" x2="149.000" y2="93.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="77.000" x2="13.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="69.000" x2="21.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="77.000" x2="13.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="85.000" x2="5.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="77.000" x2="29.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="69.000" x2="37.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="77.000" x2="29.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="85.000" x2="21.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="77.000" x2="45.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="69.000" x2="53.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="77.000" x2="45.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="85.000" x2="37.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="77.000" x2="61.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="69.000" x2="69.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="77.000" x2="61.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="85.000" x2="53.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="77.000" x2="77.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="69.000" x2="85.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="77.000" x2="77.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="85.000" x2="69.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="77.000" x2="93.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="69.000" x2="101.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="77.000" x2="93.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="85.000" x2="85.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="77.000" x2="109.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="69.000" x2="117.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="77.000" x2="109.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="85.000" x2="101.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="77.000" x2="125.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="69.000" x2="133.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="77.000" x2="125.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="85.000" x2="117.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="77.000" x2="141.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="69.000" x2="149.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="77.000" x2="141.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="85.000" x2="133.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="77.000" x2="157.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="69.000" x2="165.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="77.000" x2="157.000" y2="85.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="85.000" x2="149.000" y2="77.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="61.000" x2="13.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="53.000" x2="21.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="61.000" x2="13.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="69.000" x2="5.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="61.000" x2="29.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="53.000" x2="37.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="61.000" x2="29.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="69.000" x2="21.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="61.000" x2="45.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="53.000" x2="53.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="61.000" x2="45.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="69.000" x2="37.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="61.000" x2="61.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="53.000" x2="69.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="61.000" x2="61.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="69.000" x2="53.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="61.000" x2="77.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="53.000" x2="85.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="61.000" x2="77.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="69.000" x2="69.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="61.000" x2="93.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="53.000" x2="101.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="61.000" x2="93.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="69.000" x2="85.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="61.000" x2="109.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="53.000" x2="117.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="61.000" x2="109.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="69.000" x2="101.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="61.000" x2="125.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="53.000" x2="133.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="61.000" x2="125.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="69.000" x2="117.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="61.000" x2="141.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="53.000" x2="149.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="61.000" x2="141.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="69.000" x2="133.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="61.000" x2="157.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="53.000" x2="165.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="61.000" x2="157.000" y2="69.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="69.000" x2="149.000" y2="61.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="45.000" x2="13.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="37.000" x2="21.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="45.000" x2="13.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="53.000" x2="5.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="45.000" x2="29.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="37.000" x2="37.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="45.000" x2="29.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="53.000" x2="21.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="45.000" x2="45.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="37.000" x2="53.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="45.000" x2="45.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="53.000" x2="37.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="45.000" x2="61.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="37.000" x2="69.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="45.000" x2="61.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="53.000" x2="53.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="45.000" x2="77.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="37.000" x2="85.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="45.000" x2="77.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="53.000" x2="69.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="45.000" x2="93.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="37.000" x2="101.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="45.000" x2="93.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="53.000" x2="85.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="45.000" x2="109.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="37.000" x2="117.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="45.000" x2="109.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="53.000" x2="101.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="45.000" x2="125.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="37.000" x2="133.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="45.000" x2="125.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="53.000" x2="117.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="45.000" x2="141.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="37.000" x2="149.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="45.000" x2="141.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="53.000" x2="133.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="45.000" x2="157.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="37.000" x2="165.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="45.000" x2="157.000" y2="53.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="53.000" x2="149.000" y2="45.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="29.000" x2="13.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="21.000" x2="21.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="29.000" x2="13.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="37.000" x2="5.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="29.000" x2="29.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="21.000" x2="37.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="29.000" x2="29.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="37.000" x2="21.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="29.000" x2="45.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="21.000" x2="53.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="29.000" x2="45.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="37.000" x2="37.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="29.000" x2="61.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="21.000" x2="69.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="29.000" x2="61.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="37.000" x2="53.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="29.000" x2="77.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="21.000" x2="85.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="29.000" x2="77.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="37.000" x2="69.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="29.000" x2="93.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="21.000" x2="101.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="29.000" x2="93.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="37.000" x2="85.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="29.000" x2="109.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="21.000" x2="117.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="29.000" x2="109.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="37.000" x2="101.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="29.000" x2="125.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="21.000" x2="133.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="29.000" x2="125.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="37.000" x2="117.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="29.000" x2="141.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="21.000" x2="149.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="29.000" x2="141.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="37.000" x2="133.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="29.000" x2="157.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="21.000" x2="165.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="29.000" x2="157.000" y2="37.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="37.000" x2="149.000" y2="29.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="13.000" x2="13.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="5.000" x2="21.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="13.000" x2="13.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="13.000" y1="21.000" x2="5.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="21.000" y1="13.000" x2="29.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="5.000" x2="37.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="13.000" x2="29.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="29.000" y1="21.000" x2="21.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="37.000" y1="13.000" x2="45.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="5.000" x2="53.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="13.000" x2="45.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="45.000" y1="21.000" x2="37.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="53.000" y1="13.000" x2="61.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="5.000" x2="69.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="13.000" x2="61.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="61.000" y1="21.000" x2="53.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="69.000" y1="13.000" x2="77.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="5.000" x2="85.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="13.000" x2="77.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="77.000" y1="21.000" x2="69.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="85.000" y1="13.000" x2="93.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="5.000" x2="101.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="13.000" x2="93.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="93.000" y1="21.000" x2="85.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="101.000" y1="13.000" x2="109.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="5.000" x2="117.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="13.000" x2="109.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="109.000" y1="21.000" x2="101.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="117.000" y1="13.000" x2="125.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="5.000" x2="133.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="13.000" x2="125.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="125.000" y1="21.000" x2="117.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="133.000" y1="13.000" x2="141.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="5.000" x2="149.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="13.000" x2="141.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="141.000" y1="21.000" x2="133.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="149.000" y1="13.000" x2="157.000" y2="5.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="5.000" x2="165.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="165.000" y1="13.000" x2="157.000" y2="21.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="157.000" y1="21.000" x2="149.000" y2="13.000" stroke="#d62728" stroke-width="0.6" />
+  <line x1="5.000" y1="165.000" x2="165.000" y2="165.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="165.000" y1="165.000" x2="165.000" y2="5.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="165.000" y1="5.000" x2="5.000" y2="5.000" stroke="#000000" stroke-width="0.8" />
+  <line x1="5.000" y1="5.000" x2="5.000" y2="165.000" stroke="#000000" stroke-width="0.8" />
+</svg>

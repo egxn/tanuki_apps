@@ -1,0 +1,691 @@
+{
+  "arte": [
+    {
+      "label": "arte_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": -165435.5,
+        "y": 217755.97,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "arte_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": -189388.67,
+        "y": 217755.97,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "arte_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": -165435.5,
+        "y": 253127.56,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "arte_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": -189388.67,
+        "y": 253127.56,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "auditorio": [
+    {
+      "label": "auditorio_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": -252956.58,
+        "y": 147944.55,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "auditorio_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 84658.664,
+        "y": 250193.89,
+        "width": 3905.0759,
+        "height": 5251.459
+      }
+    },
+    {
+      "label": "auditorio_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": 84281.445,
+        "y": 286552.69,
+        "width": 3905.0759,
+        "height": 5251.459
+      }
+    }
+  ],
+  "bachillerato": [
+    {
+      "label": "bachillerato_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": 81334.172,
+        "y": 37815.625,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 81334.172,
+        "y": 53670.066,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": 104849.74,
+        "y": 53670.066,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": 104849.74,
+        "y": 37815.625,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_5_piso_1",
+      "num_puerta": 5,
+      "piso": 1,
+      "svg": {
+        "x": 104781.38,
+        "y": 146506.56,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_6_piso_1",
+      "num_puerta": 6,
+      "piso": 1,
+      "svg": {
+        "x": 104781.38,
+        "y": 130652.12,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_7_piso_1",
+      "num_puerta": 7,
+      "piso": 1,
+      "svg": {
+        "x": 81388.43,
+        "y": 131877.12,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_1_piso_2",
+      "num_puerta": 1,
+      "piso": 2,
+      "svg": {
+        "x": 81334.172,
+        "y": 37815.625,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_2_piso_2",
+      "num_puerta": 2,
+      "piso": 2,
+      "svg": {
+        "x": 81334.172,
+        "y": 53670.062,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_3_piso_2",
+      "num_puerta": 3,
+      "piso": 2,
+      "svg": {
+        "x": 81388.445,
+        "y": 131877.12,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_1_piso_3",
+      "num_puerta": 1,
+      "piso": 3,
+      "svg": {
+        "x": 81334.172,
+        "y": 37815.625,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_2_piso_3",
+      "num_puerta": 2,
+      "piso": 3,
+      "svg": {
+        "x": 81334.172,
+        "y": 53670.062,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "bachillerato_puerta_3_piso_3",
+      "num_puerta": 3,
+      "piso": 3,
+      "svg": {
+        "x": 81388.453,
+        "y": 131877.12,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "biblioteca": [
+    {
+      "label": "biblioteca_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": 49947.051,
+        "y": 156582.25,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "biblioteca_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 25299.117,
+        "y": 218263.66,
+        "width": 11690.913,
+        "height": 5002.3862
+      }
+    },
+    {
+      "label": "biblioteca_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 25299.117,
+        "y": 117727.16,
+        "width": 11690.913,
+        "height": 5002.3862
+      }
+    },
+    {
+      "label": "biblioteca_puerta_1_piso_2",
+      "num_puerta": 1,
+      "piso": 2,
+      "svg": {
+        "x": 49947.051,
+        "y": 156582.25,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "laboratorio": [
+    {
+      "label": "laboratorio_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": 73538.969,
+        "y": 83095.93,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 73538.969,
+        "y": 66506.07,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": 73538.969,
+        "y": 43615.387,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": 73538.969,
+        "y": 27760.945,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_5_piso_1",
+      "num_puerta": 5,
+      "piso": 1,
+      "svg": {
+        "x": 50418.441,
+        "y": 27760.945,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_6_piso_1",
+      "num_puerta": 6,
+      "piso": 1,
+      "svg": {
+        "x": 50418.441,
+        "y": 43615.387,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_7_piso_1",
+      "num_puerta": 7,
+      "piso": 1,
+      "svg": {
+        "x": 50418.441,
+        "y": 83095.93,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_1_piso_2",
+      "num_puerta": 1,
+      "piso": 2,
+      "svg": {
+        "x": 73538.969,
+        "y": 27760.945,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_2_piso_2",
+      "num_puerta": 2,
+      "piso": 2,
+      "svg": {
+        "x": 73538.969,
+        "y": 43615.387,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_3_piso_2",
+      "num_puerta": 3,
+      "piso": 2,
+      "svg": {
+        "x": 73538.969,
+        "y": 66506.07,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_4_piso_2",
+      "num_puerta": 4,
+      "piso": 2,
+      "svg": {
+        "x": 73538.969,
+        "y": 83095.93,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_1_piso_3",
+      "num_puerta": 1,
+      "piso": 3,
+      "svg": {
+        "x": 73538.969,
+        "y": 27760.945,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_2_piso_3",
+      "num_puerta": 2,
+      "piso": 3,
+      "svg": {
+        "x": 73538.969,
+        "y": 43615.387,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_3_piso_3",
+      "num_puerta": 3,
+      "piso": 3,
+      "svg": {
+        "x": 73538.969,
+        "y": 66506.07,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "laboratorio_puerta_4_piso_3",
+      "num_puerta": 4,
+      "piso": 3,
+      "svg": {
+        "x": 73538.969,
+        "y": 83095.93,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "ludoteca": [
+    {
+      "label": "ludoteca_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": 215038.94,
+        "y": 242382.03,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": 214443.11,
+        "y": 256350.98,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": 257464.58,
+        "y": 242382.0,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": 256868.75,
+        "y": 256350.95,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_5_piso_1",
+      "num_puerta": 5,
+      "piso": 1,
+      "svg": {
+        "x": -241942.34,
+        "y": 222542.34,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_6_piso_1",
+      "num_puerta": 6,
+      "piso": 1,
+      "svg": {
+        "x": -241942.34,
+        "y": 243688.5,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_7_piso_1",
+      "num_puerta": 7,
+      "piso": 1,
+      "svg": {
+        "x": -270520.0,
+        "y": 221452.12,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    },
+    {
+      "label": "ludoteca_puerta_8_piso_1",
+      "num_puerta": 8,
+      "piso": 1,
+      "svg": {
+        "x": -270520.0,
+        "y": 242598.28,
+        "width": 4357.8438,
+        "height": 10160.874
+      }
+    }
+  ],
+  "primaria": [
+    {
+      "label": "primaria_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": -210177.97,
+        "y": 213726.44,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "primaria_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": -232041.31,
+        "y": 213726.44,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "primaria_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": -210096.97,
+        "y": 233671.66,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "primaria_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": -232041.31,
+        "y": 233671.66,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "secundaria": [
+    {
+      "label": "secundaria_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": 151478.66,
+        "y": -176313.38,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "secundaria_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": -235707.53,
+        "y": -154756.25,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "secundaria_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": -235707.53,
+        "y": -136863.91,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "secundaria_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": 131165.19,
+        "y": -176313.38,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "secundaria_puerta_1_piso_2",
+      "num_puerta": 1,
+      "piso": 2,
+      "svg": {
+        "x": 151478.66,
+        "y": -176313.38,
+        "width": 2847.2429,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "secundaria_puerta_2_piso_2",
+      "num_puerta": 2,
+      "piso": 2,
+      "svg": {
+        "x": -235707.53,
+        "y": -154756.25,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    }
+  ],
+  "transicion": [
+    {
+      "label": "transicion_puerta_1_piso_1",
+      "num_puerta": 1,
+      "piso": 1,
+      "svg": {
+        "x": -280597.12,
+        "y": 219408.05,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "transicion_puerta_2_piso_1",
+      "num_puerta": 2,
+      "piso": 1,
+      "svg": {
+        "x": -301864.06,
+        "y": 219408.05,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "transicion_puerta_3_piso_1",
+      "num_puerta": 3,
+      "piso": 1,
+      "svg": {
+        "x": -280597.12,
+        "y": 228884.52,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    },
+    {
+      "label": "transicion_puerta_4_piso_1",
+      "num_puerta": 4,
+      "piso": 1,
+      "svg": {
+        "x": -301864.06,
+        "y": 228884.52,
+        "width": 4306.416,
+        "height": 5791.1719
+      }
+    }
+  ]
+}
