@@ -1,3 +1,12 @@
+from print_labo.utils.dev_mode import install_dev_mode
+
+def run_dev_mode():
+    install_dev_mode(source_script=PosixPath('/home/egxn/Catcode/tanuki_apps/print_labo/src/print_labo/misc_prints/00_lamp.py'), output_script=PosixPath('/home/egxn/Catcode/tanuki_apps/print_labo/01_lamp.py'), watch_paths=[PosixPath('/home/egxn/Catcode/tanuki_apps/print_labo/src/print_labo/misc_prints')], open_blender=True)
+
+if __name__ == '__main__':
+    run_dev_mode()
+
+
 import bpy
 
 
@@ -37,7 +46,7 @@ def setup_wood_join(object_name='wood_join'):
     vec_5 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_5.location = (300, 280)
     vec_5.label = "tap size"
-    vec_5.vector = [20, 50, 20]
+    vec_5.vector = [20, 40, 20]
     prim_4 = node_tree.nodes.new("GeometryNodeMeshCube")
     prim_4.location = (300, 0)
     prim_4.label = 'tap'
@@ -54,7 +63,7 @@ def setup_wood_join(object_name='wood_join'):
     vec_9 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_9.location = (900, 280)
     vec_9.label = "tap size"
-    vec_9.vector = [20, 50, 20]
+    vec_9.vector = [20, 40, 20]
     prim_8 = node_tree.nodes.new("GeometryNodeMeshCube")
     prim_8.location = (900, 0)
     prim_8.label = 'tap'
@@ -165,7 +174,7 @@ def setup_wood_join(object_name='wood_join'):
     vec_31 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_31.location = (4200, 280)
     vec_31.label = 'cylinder_2 rotate position offset'
-    vec_31.vector = [0, 30, 20]
+    vec_31.vector = [0, 10, 20]
     setpos_30 = node_tree.nodes.new("GeometryNodeSetPosition")
     setpos_30.location = (4200, 0)
     setpos_30.label = 'cylinder_2 rotate position'
@@ -197,7 +206,7 @@ def setup_wood_join(object_name='wood_join'):
     vec_38 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_38.location = (5100, 280)
     vec_38.label = 'cylinder_3 rotate position offset'
-    vec_38.vector = [0, 30, -20]
+    vec_38.vector = [0, 10, -20]
     setpos_37 = node_tree.nodes.new("GeometryNodeSetPosition")
     setpos_37.location = (5100, 0)
     setpos_37.label = 'cylinder_3 rotate position'
@@ -205,13 +214,13 @@ def setup_wood_join(object_name='wood_join'):
     node_tree.links.new(vec_38.outputs["Vector"], setpos_37.inputs["Offset"])
     bool_39 = node_tree.nodes.new("GeometryNodeMeshBoolean")
     bool_39.location = (5400, 0)
-    bool_39.label = 'difference'
-    bool_39.operation = "DIFFERENCE"
+    bool_39.label = 'union'
+    bool_39.operation = "UNION"
     try:
         bool_39.solver = "EXACT"
     except (TypeError, ValueError):
         bool_39.solver = "EXACT"
-    node_tree.links.new(bool_24.outputs["Mesh"], bool_39.inputs[0])
+    node_tree.links.new(bool_24.outputs["Mesh"], bool_39.inputs[1])
     node_tree.links.new(setpos_30.outputs["Geometry"], bool_39.inputs[1])
     node_tree.links.new(setpos_37.outputs["Geometry"], bool_39.inputs[1])
     out_40 = node_tree.nodes.new("NodeGroupOutput")
