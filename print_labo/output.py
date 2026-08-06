@@ -23,21 +23,21 @@ def setup_wood_join(object_name='wood_join'):
     val_2 = node_tree.nodes.new("ShaderNodeValue")
     val_2.location = (0, 280)
     val_2.label = 'cylinder_1 radius'
-    val_2.outputs[0].default_value = 22.75
+    val_2.outputs[0].default_value = 18.75
     val_3 = node_tree.nodes.new("ShaderNodeValue")
     val_3.location = (0, 560)
     val_3.label = 'cylinder_1 depth'
-    val_3.outputs[0].default_value = 60
+    val_3.outputs[0].default_value = 80
     prim_1 = node_tree.nodes.new("GeometryNodeMeshCylinder")
     prim_1.location = (0, 0)
     prim_1.label = 'cylinder_1'
     node_tree.links.new(val_2.outputs["Value"], prim_1.inputs["Radius"])
     node_tree.links.new(val_3.outputs["Value"], prim_1.inputs["Depth"])
-    prim_1.inputs["Vertices"].default_value = 16
+    prim_1.inputs["Vertices"].default_value = 32
     vec_5 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_5.location = (300, 280)
     vec_5.label = "tap size"
-    vec_5.vector = [20, 50, 20]
+    vec_5.vector = [20, 42, 20]
     prim_4 = node_tree.nodes.new("GeometryNodeMeshCube")
     prim_4.location = (300, 0)
     prim_4.label = 'tap'
@@ -54,7 +54,7 @@ def setup_wood_join(object_name='wood_join'):
     vec_9 = node_tree.nodes.new("FunctionNodeInputVector")
     vec_9.location = (900, 280)
     vec_9.label = "tap size"
-    vec_9.vector = [20, 50, 20]
+    vec_9.vector = [20, 42, 20]
     prim_8 = node_tree.nodes.new("GeometryNodeMeshCube")
     prim_8.location = (900, 0)
     prim_8.label = 'tap'
@@ -79,145 +79,912 @@ def setup_wood_join(object_name='wood_join'):
     node_tree.links.new(prim_1.outputs["Mesh"], bool_12.inputs[1])
     node_tree.links.new(setpos_6.outputs["Geometry"], bool_12.inputs[1])
     node_tree.links.new(setpos_10.outputs["Geometry"], bool_12.inputs[1])
-    val_14 = node_tree.nodes.new("ShaderNodeValue")
-    val_14.location = (1800, 280)
-    val_14.label = 'h_cylinder_1 radius'
-    val_14.outputs[0].default_value = 18.0
-    val_15 = node_tree.nodes.new("ShaderNodeValue")
-    val_15.location = (1800, 560)
-    val_15.label = 'h_cylinder_1 depth'
-    val_15.outputs[0].default_value = 70
-    prim_13 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    vec_14 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_14.location = (1800, 280)
+    vec_14.label = "h_tap size"
+    vec_14.vector = [10, 50, 40]
+    prim_13 = node_tree.nodes.new("GeometryNodeMeshCube")
     prim_13.location = (1800, 0)
-    prim_13.label = 'h_cylinder_1'
-    node_tree.links.new(val_14.outputs["Value"], prim_13.inputs["Radius"])
-    node_tree.links.new(val_15.outputs["Value"], prim_13.inputs["Depth"])
-    prim_13.inputs["Vertices"].default_value = 64
-    vec_17 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_17.location = (2100, 280)
-    vec_17.label = "h_tap size"
-    vec_17.vector = [10, 40, 40]
-    prim_16 = node_tree.nodes.new("GeometryNodeMeshCube")
-    prim_16.location = (2100, 0)
-    prim_16.label = 'h_tap'
-    node_tree.links.new(vec_17.outputs["Vector"], prim_16.inputs["Size"])
-    vec_19 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_19.location = (2400, 280)
-    vec_19.label = 'h_tap position offset'
-    vec_19.vector = [0, 12.75, 30]
-    setpos_18 = node_tree.nodes.new("GeometryNodeSetPosition")
-    setpos_18.location = (2400, 0)
-    setpos_18.label = 'h_tap position'
-    node_tree.links.new(prim_16.outputs["Mesh"], setpos_18.inputs["Geometry"])
-    node_tree.links.new(vec_19.outputs["Vector"], setpos_18.inputs["Offset"])
-    vec_21 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_21.location = (2700, 280)
-    vec_21.label = "h_tap size"
-    vec_21.vector = [10, 40, 40]
-    prim_20 = node_tree.nodes.new("GeometryNodeMeshCube")
-    prim_20.location = (2700, 0)
-    prim_20.label = 'h_tap'
-    node_tree.links.new(vec_21.outputs["Vector"], prim_20.inputs["Size"])
-    vec_23 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_23.location = (3000, 280)
-    vec_23.label = 'h_tap position offset'
-    vec_23.vector = [0, 12.75, -30]
-    setpos_22 = node_tree.nodes.new("GeometryNodeSetPosition")
-    setpos_22.location = (3000, 0)
-    setpos_22.label = 'h_tap position'
-    node_tree.links.new(prim_20.outputs["Mesh"], setpos_22.inputs["Geometry"])
-    node_tree.links.new(vec_23.outputs["Vector"], setpos_22.inputs["Offset"])
-    bool_24 = node_tree.nodes.new("GeometryNodeMeshBoolean")
-    bool_24.location = (3300, 0)
-    bool_24.label = 'difference'
-    bool_24.operation = "DIFFERENCE"
+    prim_13.label = 'h_tap'
+    node_tree.links.new(vec_14.outputs["Vector"], prim_13.inputs["Size"])
+    vec_16 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_16.location = (2100, 280)
+    vec_16.label = 'h_tap position offset'
+    vec_16.vector = [0, 17.75, 30]
+    setpos_15 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_15.location = (2100, 0)
+    setpos_15.label = 'h_tap position'
+    node_tree.links.new(prim_13.outputs["Mesh"], setpos_15.inputs["Geometry"])
+    node_tree.links.new(vec_16.outputs["Vector"], setpos_15.inputs["Offset"])
+    vec_18 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_18.location = (2400, 280)
+    vec_18.label = "h_tap size"
+    vec_18.vector = [10, 50, 40]
+    prim_17 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_17.location = (2400, 0)
+    prim_17.label = 'h_tap'
+    node_tree.links.new(vec_18.outputs["Vector"], prim_17.inputs["Size"])
+    vec_20 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_20.location = (2700, 280)
+    vec_20.label = 'h_tap position offset'
+    vec_20.vector = [0, 17.75, -30]
+    setpos_19 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_19.location = (2700, 0)
+    setpos_19.label = 'h_tap position'
+    node_tree.links.new(prim_17.outputs["Mesh"], setpos_19.inputs["Geometry"])
+    node_tree.links.new(vec_20.outputs["Vector"], setpos_19.inputs["Offset"])
+    bool_21 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_21.location = (3000, 0)
+    bool_21.label = 'difference'
+    bool_21.operation = "DIFFERENCE"
     try:
-        bool_24.solver = "EXACT"
+        bool_21.solver = "EXACT"
     except (TypeError, ValueError):
-        bool_24.solver = "EXACT"
-    node_tree.links.new(bool_12.outputs["Mesh"], bool_24.inputs[0])
-    node_tree.links.new(prim_13.outputs["Mesh"], bool_24.inputs[1])
-    node_tree.links.new(setpos_18.outputs["Geometry"], bool_24.inputs[1])
-    node_tree.links.new(setpos_22.outputs["Geometry"], bool_24.inputs[1])
-    val_26 = node_tree.nodes.new("ShaderNodeValue")
-    val_26.location = (3600, 280)
-    val_26.label = 'cylinder_2 radius'
-    val_26.outputs[0].default_value = 5
-    val_27 = node_tree.nodes.new("ShaderNodeValue")
-    val_27.location = (3600, 560)
-    val_27.label = 'cylinder_2 depth'
-    val_27.outputs[0].default_value = 40
-    prim_25 = node_tree.nodes.new("GeometryNodeMeshCylinder")
-    prim_25.location = (3600, 0)
-    prim_25.label = 'cylinder_2'
-    node_tree.links.new(val_26.outputs["Value"], prim_25.inputs["Radius"])
-    node_tree.links.new(val_27.outputs["Value"], prim_25.inputs["Depth"])
-    prim_25.inputs["Vertices"].default_value = 124
-    vec_29 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_29.location = (3900, 280)
-    vec_29.label = 'cylinder_2 rotate rotation'
-    vec_29.vector = [0.0, 1.5707963267948966, 0.0]
-    xform_28 = node_tree.nodes.new("GeometryNodeTransform")
-    xform_28.location = (3900, 0)
-    xform_28.label = 'cylinder_2 rotate'
-    node_tree.links.new(prim_25.outputs["Mesh"], xform_28.inputs["Geometry"])
-    node_tree.links.new(vec_29.outputs["Vector"], xform_28.inputs["Rotation"])
-    vec_31 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_31.location = (4200, 280)
-    vec_31.label = 'cylinder_2 rotate position offset'
-    vec_31.vector = [0, 30, 20]
-    setpos_30 = node_tree.nodes.new("GeometryNodeSetPosition")
-    setpos_30.location = (4200, 0)
-    setpos_30.label = 'cylinder_2 rotate position'
-    node_tree.links.new(xform_28.outputs["Geometry"], setpos_30.inputs["Geometry"])
-    node_tree.links.new(vec_31.outputs["Vector"], setpos_30.inputs["Offset"])
-    val_33 = node_tree.nodes.new("ShaderNodeValue")
-    val_33.location = (4500, 280)
-    val_33.label = 'cylinder_3 radius'
-    val_33.outputs[0].default_value = 5
-    val_34 = node_tree.nodes.new("ShaderNodeValue")
-    val_34.location = (4500, 560)
-    val_34.label = 'cylinder_3 depth'
-    val_34.outputs[0].default_value = 40
-    prim_32 = node_tree.nodes.new("GeometryNodeMeshCylinder")
-    prim_32.location = (4500, 0)
-    prim_32.label = 'cylinder_3'
-    node_tree.links.new(val_33.outputs["Value"], prim_32.inputs["Radius"])
-    node_tree.links.new(val_34.outputs["Value"], prim_32.inputs["Depth"])
-    prim_32.inputs["Vertices"].default_value = 124
-    vec_36 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_36.location = (4800, 280)
-    vec_36.label = 'cylinder_3 rotate rotation'
-    vec_36.vector = [0.0, 1.5707963267948966, 0.0]
-    xform_35 = node_tree.nodes.new("GeometryNodeTransform")
-    xform_35.location = (4800, 0)
-    xform_35.label = 'cylinder_3 rotate'
-    node_tree.links.new(prim_32.outputs["Mesh"], xform_35.inputs["Geometry"])
-    node_tree.links.new(vec_36.outputs["Vector"], xform_35.inputs["Rotation"])
-    vec_38 = node_tree.nodes.new("FunctionNodeInputVector")
-    vec_38.location = (5100, 280)
-    vec_38.label = 'cylinder_3 rotate position offset'
-    vec_38.vector = [0, 30, -20]
-    setpos_37 = node_tree.nodes.new("GeometryNodeSetPosition")
-    setpos_37.location = (5100, 0)
-    setpos_37.label = 'cylinder_3 rotate position'
-    node_tree.links.new(xform_35.outputs["Geometry"], setpos_37.inputs["Geometry"])
-    node_tree.links.new(vec_38.outputs["Vector"], setpos_37.inputs["Offset"])
-    bool_39 = node_tree.nodes.new("GeometryNodeMeshBoolean")
-    bool_39.location = (5400, 0)
-    bool_39.label = 'difference'
-    bool_39.operation = "DIFFERENCE"
+        bool_21.solver = "EXACT"
+    node_tree.links.new(bool_12.outputs["Mesh"], bool_21.inputs[0])
+    node_tree.links.new(setpos_15.outputs["Geometry"], bool_21.inputs[1])
+    node_tree.links.new(setpos_19.outputs["Geometry"], bool_21.inputs[1])
+    val_23 = node_tree.nodes.new("ShaderNodeValue")
+    val_23.location = (3300, 280)
+    val_23.label = 'cylinder_2 radius'
+    val_23.outputs[0].default_value = 4
+    val_24 = node_tree.nodes.new("ShaderNodeValue")
+    val_24.location = (3300, 560)
+    val_24.label = 'cylinder_2 depth'
+    val_24.outputs[0].default_value = 40
+    prim_22 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_22.location = (3300, 0)
+    prim_22.label = 'cylinder_2'
+    node_tree.links.new(val_23.outputs["Value"], prim_22.inputs["Radius"])
+    node_tree.links.new(val_24.outputs["Value"], prim_22.inputs["Depth"])
+    prim_22.inputs["Vertices"].default_value = 124
+    vec_26 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_26.location = (3600, 280)
+    vec_26.label = 'cylinder_2 rotate rotation'
+    vec_26.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_25 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_25.location = (3600, 0)
+    xform_25.label = 'cylinder_2 rotate'
+    node_tree.links.new(prim_22.outputs["Mesh"], xform_25.inputs["Geometry"])
+    node_tree.links.new(vec_26.outputs["Vector"], xform_25.inputs["Rotation"])
+    vec_28 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_28.location = (3900, 280)
+    vec_28.label = 'cylinder_2 rotate position offset'
+    vec_28.vector = [0, 25, 20]
+    setpos_27 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_27.location = (3900, 0)
+    setpos_27.label = 'cylinder_2 rotate position'
+    node_tree.links.new(xform_25.outputs["Geometry"], setpos_27.inputs["Geometry"])
+    node_tree.links.new(vec_28.outputs["Vector"], setpos_27.inputs["Offset"])
+    val_30 = node_tree.nodes.new("ShaderNodeValue")
+    val_30.location = (4200, 280)
+    val_30.label = 'cylinder_3 radius'
+    val_30.outputs[0].default_value = 4
+    val_31 = node_tree.nodes.new("ShaderNodeValue")
+    val_31.location = (4200, 560)
+    val_31.label = 'cylinder_3 depth'
+    val_31.outputs[0].default_value = 40
+    prim_29 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_29.location = (4200, 0)
+    prim_29.label = 'cylinder_3'
+    node_tree.links.new(val_30.outputs["Value"], prim_29.inputs["Radius"])
+    node_tree.links.new(val_31.outputs["Value"], prim_29.inputs["Depth"])
+    prim_29.inputs["Vertices"].default_value = 124
+    vec_33 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_33.location = (4500, 280)
+    vec_33.label = 'cylinder_3 rotate rotation'
+    vec_33.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_32 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_32.location = (4500, 0)
+    xform_32.label = 'cylinder_3 rotate'
+    node_tree.links.new(prim_29.outputs["Mesh"], xform_32.inputs["Geometry"])
+    node_tree.links.new(vec_33.outputs["Vector"], xform_32.inputs["Rotation"])
+    vec_35 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_35.location = (4800, 280)
+    vec_35.label = 'cylinder_3 rotate position offset'
+    vec_35.vector = [0, 25, -20]
+    setpos_34 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_34.location = (4800, 0)
+    setpos_34.label = 'cylinder_3 rotate position'
+    node_tree.links.new(xform_32.outputs["Geometry"], setpos_34.inputs["Geometry"])
+    node_tree.links.new(vec_35.outputs["Vector"], setpos_34.inputs["Offset"])
+    bool_36 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_36.location = (5100, 0)
+    bool_36.label = 'difference'
+    bool_36.operation = "DIFFERENCE"
     try:
-        bool_39.solver = "EXACT"
+        bool_36.solver = "EXACT"
     except (TypeError, ValueError):
-        bool_39.solver = "EXACT"
-    node_tree.links.new(bool_24.outputs["Mesh"], bool_39.inputs[0])
-    node_tree.links.new(setpos_30.outputs["Geometry"], bool_39.inputs[1])
-    node_tree.links.new(setpos_37.outputs["Geometry"], bool_39.inputs[1])
-    out_40 = node_tree.nodes.new("NodeGroupOutput")
-    out_40.location = (5700, 0)
-    out_40.label = "output"
-    node_tree.links.new(bool_39.outputs[0], out_40.inputs[0])
+        bool_36.solver = "EXACT"
+    node_tree.links.new(bool_21.outputs["Mesh"], bool_36.inputs[0])
+    node_tree.links.new(setpos_27.outputs["Geometry"], bool_36.inputs[1])
+    node_tree.links.new(setpos_34.outputs["Geometry"], bool_36.inputs[1])
+    val_38 = node_tree.nodes.new("ShaderNodeValue")
+    val_38.location = (5400, 280)
+    val_38.label = 'cylinder_1 radius'
+    val_38.outputs[0].default_value = 18.75
+    val_39 = node_tree.nodes.new("ShaderNodeValue")
+    val_39.location = (5400, 560)
+    val_39.label = 'cylinder_1 depth'
+    val_39.outputs[0].default_value = 80
+    prim_37 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_37.location = (5400, 0)
+    prim_37.label = 'cylinder_1'
+    node_tree.links.new(val_38.outputs["Value"], prim_37.inputs["Radius"])
+    node_tree.links.new(val_39.outputs["Value"], prim_37.inputs["Depth"])
+    prim_37.inputs["Vertices"].default_value = 32
+    vec_41 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_41.location = (5700, 280)
+    vec_41.label = "tap size"
+    vec_41.vector = [20, 42, 20]
+    prim_40 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_40.location = (5700, 0)
+    prim_40.label = 'tap'
+    node_tree.links.new(vec_41.outputs["Vector"], prim_40.inputs["Size"])
+    vec_43 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_43.location = (6000, 280)
+    vec_43.label = 'tap position offset'
+    vec_43.vector = [0, 12.75, 20]
+    setpos_42 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_42.location = (6000, 0)
+    setpos_42.label = 'tap position'
+    node_tree.links.new(prim_40.outputs["Mesh"], setpos_42.inputs["Geometry"])
+    node_tree.links.new(vec_43.outputs["Vector"], setpos_42.inputs["Offset"])
+    vec_45 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_45.location = (6300, 280)
+    vec_45.label = "tap size"
+    vec_45.vector = [20, 42, 20]
+    prim_44 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_44.location = (6300, 0)
+    prim_44.label = 'tap'
+    node_tree.links.new(vec_45.outputs["Vector"], prim_44.inputs["Size"])
+    vec_47 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_47.location = (6600, 280)
+    vec_47.label = 'tap position offset'
+    vec_47.vector = [0, 12.75, -20]
+    setpos_46 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_46.location = (6600, 0)
+    setpos_46.label = 'tap position'
+    node_tree.links.new(prim_44.outputs["Mesh"], setpos_46.inputs["Geometry"])
+    node_tree.links.new(vec_47.outputs["Vector"], setpos_46.inputs["Offset"])
+    bool_48 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_48.location = (6900, 0)
+    bool_48.label = 'union'
+    bool_48.operation = "UNION"
+    try:
+        bool_48.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_48.solver = "EXACT"
+    node_tree.links.new(prim_37.outputs["Mesh"], bool_48.inputs[1])
+    node_tree.links.new(setpos_42.outputs["Geometry"], bool_48.inputs[1])
+    node_tree.links.new(setpos_46.outputs["Geometry"], bool_48.inputs[1])
+    vec_50 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_50.location = (7200, 280)
+    vec_50.label = "h_tap size"
+    vec_50.vector = [10, 50, 40]
+    prim_49 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_49.location = (7200, 0)
+    prim_49.label = 'h_tap'
+    node_tree.links.new(vec_50.outputs["Vector"], prim_49.inputs["Size"])
+    vec_52 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_52.location = (7500, 280)
+    vec_52.label = 'h_tap position offset'
+    vec_52.vector = [0, 17.75, 30]
+    setpos_51 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_51.location = (7500, 0)
+    setpos_51.label = 'h_tap position'
+    node_tree.links.new(prim_49.outputs["Mesh"], setpos_51.inputs["Geometry"])
+    node_tree.links.new(vec_52.outputs["Vector"], setpos_51.inputs["Offset"])
+    vec_54 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_54.location = (7800, 280)
+    vec_54.label = "h_tap size"
+    vec_54.vector = [10, 50, 40]
+    prim_53 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_53.location = (7800, 0)
+    prim_53.label = 'h_tap'
+    node_tree.links.new(vec_54.outputs["Vector"], prim_53.inputs["Size"])
+    vec_56 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_56.location = (8100, 280)
+    vec_56.label = 'h_tap position offset'
+    vec_56.vector = [0, 17.75, -30]
+    setpos_55 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_55.location = (8100, 0)
+    setpos_55.label = 'h_tap position'
+    node_tree.links.new(prim_53.outputs["Mesh"], setpos_55.inputs["Geometry"])
+    node_tree.links.new(vec_56.outputs["Vector"], setpos_55.inputs["Offset"])
+    bool_57 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_57.location = (8400, 0)
+    bool_57.label = 'difference'
+    bool_57.operation = "DIFFERENCE"
+    try:
+        bool_57.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_57.solver = "EXACT"
+    node_tree.links.new(bool_48.outputs["Mesh"], bool_57.inputs[0])
+    node_tree.links.new(setpos_51.outputs["Geometry"], bool_57.inputs[1])
+    node_tree.links.new(setpos_55.outputs["Geometry"], bool_57.inputs[1])
+    val_59 = node_tree.nodes.new("ShaderNodeValue")
+    val_59.location = (8700, 280)
+    val_59.label = 'cylinder_2 radius'
+    val_59.outputs[0].default_value = 4
+    val_60 = node_tree.nodes.new("ShaderNodeValue")
+    val_60.location = (8700, 560)
+    val_60.label = 'cylinder_2 depth'
+    val_60.outputs[0].default_value = 40
+    prim_58 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_58.location = (8700, 0)
+    prim_58.label = 'cylinder_2'
+    node_tree.links.new(val_59.outputs["Value"], prim_58.inputs["Radius"])
+    node_tree.links.new(val_60.outputs["Value"], prim_58.inputs["Depth"])
+    prim_58.inputs["Vertices"].default_value = 124
+    vec_62 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_62.location = (9000, 280)
+    vec_62.label = 'cylinder_2 rotate rotation'
+    vec_62.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_61 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_61.location = (9000, 0)
+    xform_61.label = 'cylinder_2 rotate'
+    node_tree.links.new(prim_58.outputs["Mesh"], xform_61.inputs["Geometry"])
+    node_tree.links.new(vec_62.outputs["Vector"], xform_61.inputs["Rotation"])
+    vec_64 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_64.location = (9300, 280)
+    vec_64.label = 'cylinder_2 rotate position offset'
+    vec_64.vector = [0, 25, 20]
+    setpos_63 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_63.location = (9300, 0)
+    setpos_63.label = 'cylinder_2 rotate position'
+    node_tree.links.new(xform_61.outputs["Geometry"], setpos_63.inputs["Geometry"])
+    node_tree.links.new(vec_64.outputs["Vector"], setpos_63.inputs["Offset"])
+    val_66 = node_tree.nodes.new("ShaderNodeValue")
+    val_66.location = (9600, 280)
+    val_66.label = 'cylinder_3 radius'
+    val_66.outputs[0].default_value = 4
+    val_67 = node_tree.nodes.new("ShaderNodeValue")
+    val_67.location = (9600, 560)
+    val_67.label = 'cylinder_3 depth'
+    val_67.outputs[0].default_value = 40
+    prim_65 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_65.location = (9600, 0)
+    prim_65.label = 'cylinder_3'
+    node_tree.links.new(val_66.outputs["Value"], prim_65.inputs["Radius"])
+    node_tree.links.new(val_67.outputs["Value"], prim_65.inputs["Depth"])
+    prim_65.inputs["Vertices"].default_value = 124
+    vec_69 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_69.location = (9900, 280)
+    vec_69.label = 'cylinder_3 rotate rotation'
+    vec_69.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_68 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_68.location = (9900, 0)
+    xform_68.label = 'cylinder_3 rotate'
+    node_tree.links.new(prim_65.outputs["Mesh"], xform_68.inputs["Geometry"])
+    node_tree.links.new(vec_69.outputs["Vector"], xform_68.inputs["Rotation"])
+    vec_71 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_71.location = (10200, 280)
+    vec_71.label = 'cylinder_3 rotate position offset'
+    vec_71.vector = [0, 25, -20]
+    setpos_70 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_70.location = (10200, 0)
+    setpos_70.label = 'cylinder_3 rotate position'
+    node_tree.links.new(xform_68.outputs["Geometry"], setpos_70.inputs["Geometry"])
+    node_tree.links.new(vec_71.outputs["Vector"], setpos_70.inputs["Offset"])
+    bool_72 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_72.location = (10500, 0)
+    bool_72.label = 'difference'
+    bool_72.operation = "DIFFERENCE"
+    try:
+        bool_72.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_72.solver = "EXACT"
+    node_tree.links.new(bool_57.outputs["Mesh"], bool_72.inputs[0])
+    node_tree.links.new(setpos_63.outputs["Geometry"], bool_72.inputs[1])
+    node_tree.links.new(setpos_70.outputs["Geometry"], bool_72.inputs[1])
+    vec_74 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_74.location = (10800, 280)
+    vec_74.label = 'difference rotate rotation'
+    vec_74.vector = [0.0, 1.5707963267948966, 3.141592653589793]
+    xform_73 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_73.location = (10800, 0)
+    xform_73.label = 'difference rotate'
+    node_tree.links.new(bool_72.outputs["Mesh"], xform_73.inputs["Geometry"])
+    node_tree.links.new(vec_74.outputs["Vector"], xform_73.inputs["Rotation"])
+    vec_76 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_76.location = (11100, 280)
+    vec_76.label = 'difference rotate rotate rotation'
+    vec_76.vector = [-1.5707963267948966, 0.0, 0.0]
+    xform_75 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_75.location = (11100, 0)
+    xform_75.label = 'difference rotate rotate'
+    node_tree.links.new(xform_73.outputs["Geometry"], xform_75.inputs["Geometry"])
+    node_tree.links.new(vec_76.outputs["Vector"], xform_75.inputs["Rotation"])
+    vec_78 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_78.location = (11400, 280)
+    vec_78.label = 'difference rotate rotate position offset'
+    vec_78.vector = [0, -33, -21.25]
+    setpos_77 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_77.location = (11400, 0)
+    setpos_77.label = 'difference rotate rotate position'
+    node_tree.links.new(xform_75.outputs["Geometry"], setpos_77.inputs["Geometry"])
+    node_tree.links.new(vec_78.outputs["Vector"], setpos_77.inputs["Offset"])
+    bool_79 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_79.location = (11700, 0)
+    bool_79.label = 'union'
+    bool_79.operation = "UNION"
+    try:
+        bool_79.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_79.solver = "EXACT"
+    node_tree.links.new(bool_36.outputs["Mesh"], bool_79.inputs[1])
+    node_tree.links.new(setpos_77.outputs["Geometry"], bool_79.inputs[1])
+    val_81 = node_tree.nodes.new("ShaderNodeValue")
+    val_81.location = (12000, 280)
+    val_81.label = 'joint_blend_region radius'
+    val_81.outputs[0].default_value = 18
+    prim_80 = node_tree.nodes.new("GeometryNodeMeshUVSphere")
+    prim_80.location = (12000, 0)
+    prim_80.label = 'joint_blend_region'
+    node_tree.links.new(val_81.outputs["Value"], prim_80.inputs["Radius"])
+    prim_80.inputs["Segments"].default_value = 64
+    vec_83 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_83.location = (12300, 280)
+    vec_83.label = 'joint_blend_region position offset'
+    vec_83.vector = [0, -16, -15]
+    setpos_82 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_82.location = (12300, 0)
+    setpos_82.label = 'joint_blend_region position'
+    node_tree.links.new(prim_80.outputs["Mesh"], setpos_82.inputs["Geometry"])
+    node_tree.links.new(vec_83.outputs["Vector"], setpos_82.inputs["Offset"])
+    bool_84 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_84.location = (12600, 0)
+    bool_84.label = 'difference'
+    bool_84.operation = "DIFFERENCE"
+    try:
+        bool_84.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_84.solver = "EXACT"
+    node_tree.links.new(bool_79.outputs["Mesh"], bool_84.inputs[0])
+    node_tree.links.new(setpos_82.outputs["Geometry"], bool_84.inputs[1])
+    val_86 = node_tree.nodes.new("ShaderNodeValue")
+    val_86.location = (12900, 280)
+    val_86.label = 'cylinder_1 radius'
+    val_86.outputs[0].default_value = 18.75
+    val_87 = node_tree.nodes.new("ShaderNodeValue")
+    val_87.location = (12900, 560)
+    val_87.label = 'cylinder_1 depth'
+    val_87.outputs[0].default_value = 80
+    prim_85 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_85.location = (12900, 0)
+    prim_85.label = 'cylinder_1'
+    node_tree.links.new(val_86.outputs["Value"], prim_85.inputs["Radius"])
+    node_tree.links.new(val_87.outputs["Value"], prim_85.inputs["Depth"])
+    prim_85.inputs["Vertices"].default_value = 32
+    vec_89 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_89.location = (13200, 280)
+    vec_89.label = "tap size"
+    vec_89.vector = [20, 42, 20]
+    prim_88 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_88.location = (13200, 0)
+    prim_88.label = 'tap'
+    node_tree.links.new(vec_89.outputs["Vector"], prim_88.inputs["Size"])
+    vec_91 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_91.location = (13500, 280)
+    vec_91.label = 'tap position offset'
+    vec_91.vector = [0, 12.75, 20]
+    setpos_90 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_90.location = (13500, 0)
+    setpos_90.label = 'tap position'
+    node_tree.links.new(prim_88.outputs["Mesh"], setpos_90.inputs["Geometry"])
+    node_tree.links.new(vec_91.outputs["Vector"], setpos_90.inputs["Offset"])
+    vec_93 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_93.location = (13800, 280)
+    vec_93.label = "tap size"
+    vec_93.vector = [20, 42, 20]
+    prim_92 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_92.location = (13800, 0)
+    prim_92.label = 'tap'
+    node_tree.links.new(vec_93.outputs["Vector"], prim_92.inputs["Size"])
+    vec_95 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_95.location = (14100, 280)
+    vec_95.label = 'tap position offset'
+    vec_95.vector = [0, 12.75, -20]
+    setpos_94 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_94.location = (14100, 0)
+    setpos_94.label = 'tap position'
+    node_tree.links.new(prim_92.outputs["Mesh"], setpos_94.inputs["Geometry"])
+    node_tree.links.new(vec_95.outputs["Vector"], setpos_94.inputs["Offset"])
+    bool_96 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_96.location = (14400, 0)
+    bool_96.label = 'union'
+    bool_96.operation = "UNION"
+    try:
+        bool_96.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_96.solver = "EXACT"
+    node_tree.links.new(prim_85.outputs["Mesh"], bool_96.inputs[1])
+    node_tree.links.new(setpos_90.outputs["Geometry"], bool_96.inputs[1])
+    node_tree.links.new(setpos_94.outputs["Geometry"], bool_96.inputs[1])
+    vec_98 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_98.location = (14700, 280)
+    vec_98.label = "h_tap size"
+    vec_98.vector = [10, 50, 40]
+    prim_97 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_97.location = (14700, 0)
+    prim_97.label = 'h_tap'
+    node_tree.links.new(vec_98.outputs["Vector"], prim_97.inputs["Size"])
+    vec_100 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_100.location = (15000, 280)
+    vec_100.label = 'h_tap position offset'
+    vec_100.vector = [0, 17.75, 30]
+    setpos_99 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_99.location = (15000, 0)
+    setpos_99.label = 'h_tap position'
+    node_tree.links.new(prim_97.outputs["Mesh"], setpos_99.inputs["Geometry"])
+    node_tree.links.new(vec_100.outputs["Vector"], setpos_99.inputs["Offset"])
+    vec_102 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_102.location = (15300, 280)
+    vec_102.label = "h_tap size"
+    vec_102.vector = [10, 50, 40]
+    prim_101 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_101.location = (15300, 0)
+    prim_101.label = 'h_tap'
+    node_tree.links.new(vec_102.outputs["Vector"], prim_101.inputs["Size"])
+    vec_104 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_104.location = (15600, 280)
+    vec_104.label = 'h_tap position offset'
+    vec_104.vector = [0, 17.75, -30]
+    setpos_103 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_103.location = (15600, 0)
+    setpos_103.label = 'h_tap position'
+    node_tree.links.new(prim_101.outputs["Mesh"], setpos_103.inputs["Geometry"])
+    node_tree.links.new(vec_104.outputs["Vector"], setpos_103.inputs["Offset"])
+    bool_105 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_105.location = (15900, 0)
+    bool_105.label = 'difference'
+    bool_105.operation = "DIFFERENCE"
+    try:
+        bool_105.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_105.solver = "EXACT"
+    node_tree.links.new(bool_96.outputs["Mesh"], bool_105.inputs[0])
+    node_tree.links.new(setpos_99.outputs["Geometry"], bool_105.inputs[1])
+    node_tree.links.new(setpos_103.outputs["Geometry"], bool_105.inputs[1])
+    val_107 = node_tree.nodes.new("ShaderNodeValue")
+    val_107.location = (16200, 280)
+    val_107.label = 'cylinder_2 radius'
+    val_107.outputs[0].default_value = 4
+    val_108 = node_tree.nodes.new("ShaderNodeValue")
+    val_108.location = (16200, 560)
+    val_108.label = 'cylinder_2 depth'
+    val_108.outputs[0].default_value = 40
+    prim_106 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_106.location = (16200, 0)
+    prim_106.label = 'cylinder_2'
+    node_tree.links.new(val_107.outputs["Value"], prim_106.inputs["Radius"])
+    node_tree.links.new(val_108.outputs["Value"], prim_106.inputs["Depth"])
+    prim_106.inputs["Vertices"].default_value = 124
+    vec_110 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_110.location = (16500, 280)
+    vec_110.label = 'cylinder_2 rotate rotation'
+    vec_110.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_109 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_109.location = (16500, 0)
+    xform_109.label = 'cylinder_2 rotate'
+    node_tree.links.new(prim_106.outputs["Mesh"], xform_109.inputs["Geometry"])
+    node_tree.links.new(vec_110.outputs["Vector"], xform_109.inputs["Rotation"])
+    vec_112 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_112.location = (16800, 280)
+    vec_112.label = 'cylinder_2 rotate position offset'
+    vec_112.vector = [0, 25, 20]
+    setpos_111 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_111.location = (16800, 0)
+    setpos_111.label = 'cylinder_2 rotate position'
+    node_tree.links.new(xform_109.outputs["Geometry"], setpos_111.inputs["Geometry"])
+    node_tree.links.new(vec_112.outputs["Vector"], setpos_111.inputs["Offset"])
+    val_114 = node_tree.nodes.new("ShaderNodeValue")
+    val_114.location = (17100, 280)
+    val_114.label = 'cylinder_3 radius'
+    val_114.outputs[0].default_value = 4
+    val_115 = node_tree.nodes.new("ShaderNodeValue")
+    val_115.location = (17100, 560)
+    val_115.label = 'cylinder_3 depth'
+    val_115.outputs[0].default_value = 40
+    prim_113 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_113.location = (17100, 0)
+    prim_113.label = 'cylinder_3'
+    node_tree.links.new(val_114.outputs["Value"], prim_113.inputs["Radius"])
+    node_tree.links.new(val_115.outputs["Value"], prim_113.inputs["Depth"])
+    prim_113.inputs["Vertices"].default_value = 124
+    vec_117 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_117.location = (17400, 280)
+    vec_117.label = 'cylinder_3 rotate rotation'
+    vec_117.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_116 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_116.location = (17400, 0)
+    xform_116.label = 'cylinder_3 rotate'
+    node_tree.links.new(prim_113.outputs["Mesh"], xform_116.inputs["Geometry"])
+    node_tree.links.new(vec_117.outputs["Vector"], xform_116.inputs["Rotation"])
+    vec_119 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_119.location = (17700, 280)
+    vec_119.label = 'cylinder_3 rotate position offset'
+    vec_119.vector = [0, 25, -20]
+    setpos_118 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_118.location = (17700, 0)
+    setpos_118.label = 'cylinder_3 rotate position'
+    node_tree.links.new(xform_116.outputs["Geometry"], setpos_118.inputs["Geometry"])
+    node_tree.links.new(vec_119.outputs["Vector"], setpos_118.inputs["Offset"])
+    bool_120 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_120.location = (18000, 0)
+    bool_120.label = 'difference'
+    bool_120.operation = "DIFFERENCE"
+    try:
+        bool_120.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_120.solver = "EXACT"
+    node_tree.links.new(bool_105.outputs["Mesh"], bool_120.inputs[0])
+    node_tree.links.new(setpos_111.outputs["Geometry"], bool_120.inputs[1])
+    node_tree.links.new(setpos_118.outputs["Geometry"], bool_120.inputs[1])
+    val_122 = node_tree.nodes.new("ShaderNodeValue")
+    val_122.location = (18300, 280)
+    val_122.label = 'cylinder_1 radius'
+    val_122.outputs[0].default_value = 18.75
+    val_123 = node_tree.nodes.new("ShaderNodeValue")
+    val_123.location = (18300, 560)
+    val_123.label = 'cylinder_1 depth'
+    val_123.outputs[0].default_value = 80
+    prim_121 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_121.location = (18300, 0)
+    prim_121.label = 'cylinder_1'
+    node_tree.links.new(val_122.outputs["Value"], prim_121.inputs["Radius"])
+    node_tree.links.new(val_123.outputs["Value"], prim_121.inputs["Depth"])
+    prim_121.inputs["Vertices"].default_value = 32
+    vec_125 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_125.location = (18600, 280)
+    vec_125.label = "tap size"
+    vec_125.vector = [20, 42, 20]
+    prim_124 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_124.location = (18600, 0)
+    prim_124.label = 'tap'
+    node_tree.links.new(vec_125.outputs["Vector"], prim_124.inputs["Size"])
+    vec_127 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_127.location = (18900, 280)
+    vec_127.label = 'tap position offset'
+    vec_127.vector = [0, 12.75, 20]
+    setpos_126 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_126.location = (18900, 0)
+    setpos_126.label = 'tap position'
+    node_tree.links.new(prim_124.outputs["Mesh"], setpos_126.inputs["Geometry"])
+    node_tree.links.new(vec_127.outputs["Vector"], setpos_126.inputs["Offset"])
+    vec_129 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_129.location = (19200, 280)
+    vec_129.label = "tap size"
+    vec_129.vector = [20, 42, 20]
+    prim_128 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_128.location = (19200, 0)
+    prim_128.label = 'tap'
+    node_tree.links.new(vec_129.outputs["Vector"], prim_128.inputs["Size"])
+    vec_131 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_131.location = (19500, 280)
+    vec_131.label = 'tap position offset'
+    vec_131.vector = [0, 12.75, -20]
+    setpos_130 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_130.location = (19500, 0)
+    setpos_130.label = 'tap position'
+    node_tree.links.new(prim_128.outputs["Mesh"], setpos_130.inputs["Geometry"])
+    node_tree.links.new(vec_131.outputs["Vector"], setpos_130.inputs["Offset"])
+    bool_132 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_132.location = (19800, 0)
+    bool_132.label = 'union'
+    bool_132.operation = "UNION"
+    try:
+        bool_132.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_132.solver = "EXACT"
+    node_tree.links.new(prim_121.outputs["Mesh"], bool_132.inputs[1])
+    node_tree.links.new(setpos_126.outputs["Geometry"], bool_132.inputs[1])
+    node_tree.links.new(setpos_130.outputs["Geometry"], bool_132.inputs[1])
+    vec_134 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_134.location = (20100, 280)
+    vec_134.label = "h_tap size"
+    vec_134.vector = [10, 50, 40]
+    prim_133 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_133.location = (20100, 0)
+    prim_133.label = 'h_tap'
+    node_tree.links.new(vec_134.outputs["Vector"], prim_133.inputs["Size"])
+    vec_136 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_136.location = (20400, 280)
+    vec_136.label = 'h_tap position offset'
+    vec_136.vector = [0, 17.75, 30]
+    setpos_135 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_135.location = (20400, 0)
+    setpos_135.label = 'h_tap position'
+    node_tree.links.new(prim_133.outputs["Mesh"], setpos_135.inputs["Geometry"])
+    node_tree.links.new(vec_136.outputs["Vector"], setpos_135.inputs["Offset"])
+    vec_138 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_138.location = (20700, 280)
+    vec_138.label = "h_tap size"
+    vec_138.vector = [10, 50, 40]
+    prim_137 = node_tree.nodes.new("GeometryNodeMeshCube")
+    prim_137.location = (20700, 0)
+    prim_137.label = 'h_tap'
+    node_tree.links.new(vec_138.outputs["Vector"], prim_137.inputs["Size"])
+    vec_140 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_140.location = (21000, 280)
+    vec_140.label = 'h_tap position offset'
+    vec_140.vector = [0, 17.75, -30]
+    setpos_139 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_139.location = (21000, 0)
+    setpos_139.label = 'h_tap position'
+    node_tree.links.new(prim_137.outputs["Mesh"], setpos_139.inputs["Geometry"])
+    node_tree.links.new(vec_140.outputs["Vector"], setpos_139.inputs["Offset"])
+    bool_141 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_141.location = (21300, 0)
+    bool_141.label = 'difference'
+    bool_141.operation = "DIFFERENCE"
+    try:
+        bool_141.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_141.solver = "EXACT"
+    node_tree.links.new(bool_132.outputs["Mesh"], bool_141.inputs[0])
+    node_tree.links.new(setpos_135.outputs["Geometry"], bool_141.inputs[1])
+    node_tree.links.new(setpos_139.outputs["Geometry"], bool_141.inputs[1])
+    val_143 = node_tree.nodes.new("ShaderNodeValue")
+    val_143.location = (21600, 280)
+    val_143.label = 'cylinder_2 radius'
+    val_143.outputs[0].default_value = 4
+    val_144 = node_tree.nodes.new("ShaderNodeValue")
+    val_144.location = (21600, 560)
+    val_144.label = 'cylinder_2 depth'
+    val_144.outputs[0].default_value = 40
+    prim_142 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_142.location = (21600, 0)
+    prim_142.label = 'cylinder_2'
+    node_tree.links.new(val_143.outputs["Value"], prim_142.inputs["Radius"])
+    node_tree.links.new(val_144.outputs["Value"], prim_142.inputs["Depth"])
+    prim_142.inputs["Vertices"].default_value = 124
+    vec_146 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_146.location = (21900, 280)
+    vec_146.label = 'cylinder_2 rotate rotation'
+    vec_146.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_145 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_145.location = (21900, 0)
+    xform_145.label = 'cylinder_2 rotate'
+    node_tree.links.new(prim_142.outputs["Mesh"], xform_145.inputs["Geometry"])
+    node_tree.links.new(vec_146.outputs["Vector"], xform_145.inputs["Rotation"])
+    vec_148 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_148.location = (22200, 280)
+    vec_148.label = 'cylinder_2 rotate position offset'
+    vec_148.vector = [0, 25, 20]
+    setpos_147 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_147.location = (22200, 0)
+    setpos_147.label = 'cylinder_2 rotate position'
+    node_tree.links.new(xform_145.outputs["Geometry"], setpos_147.inputs["Geometry"])
+    node_tree.links.new(vec_148.outputs["Vector"], setpos_147.inputs["Offset"])
+    val_150 = node_tree.nodes.new("ShaderNodeValue")
+    val_150.location = (22500, 280)
+    val_150.label = 'cylinder_3 radius'
+    val_150.outputs[0].default_value = 4
+    val_151 = node_tree.nodes.new("ShaderNodeValue")
+    val_151.location = (22500, 560)
+    val_151.label = 'cylinder_3 depth'
+    val_151.outputs[0].default_value = 40
+    prim_149 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_149.location = (22500, 0)
+    prim_149.label = 'cylinder_3'
+    node_tree.links.new(val_150.outputs["Value"], prim_149.inputs["Radius"])
+    node_tree.links.new(val_151.outputs["Value"], prim_149.inputs["Depth"])
+    prim_149.inputs["Vertices"].default_value = 124
+    vec_153 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_153.location = (22800, 280)
+    vec_153.label = 'cylinder_3 rotate rotation'
+    vec_153.vector = [0.0, 1.5707963267948966, 0.0]
+    xform_152 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_152.location = (22800, 0)
+    xform_152.label = 'cylinder_3 rotate'
+    node_tree.links.new(prim_149.outputs["Mesh"], xform_152.inputs["Geometry"])
+    node_tree.links.new(vec_153.outputs["Vector"], xform_152.inputs["Rotation"])
+    vec_155 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_155.location = (23100, 280)
+    vec_155.label = 'cylinder_3 rotate position offset'
+    vec_155.vector = [0, 25, -20]
+    setpos_154 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_154.location = (23100, 0)
+    setpos_154.label = 'cylinder_3 rotate position'
+    node_tree.links.new(xform_152.outputs["Geometry"], setpos_154.inputs["Geometry"])
+    node_tree.links.new(vec_155.outputs["Vector"], setpos_154.inputs["Offset"])
+    bool_156 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_156.location = (23400, 0)
+    bool_156.label = 'difference'
+    bool_156.operation = "DIFFERENCE"
+    try:
+        bool_156.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_156.solver = "EXACT"
+    node_tree.links.new(bool_141.outputs["Mesh"], bool_156.inputs[0])
+    node_tree.links.new(setpos_147.outputs["Geometry"], bool_156.inputs[1])
+    node_tree.links.new(setpos_154.outputs["Geometry"], bool_156.inputs[1])
+    vec_158 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_158.location = (23700, 280)
+    vec_158.label = 'difference rotate rotation'
+    vec_158.vector = [0.0, 1.5707963267948966, 3.141592653589793]
+    xform_157 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_157.location = (23700, 0)
+    xform_157.label = 'difference rotate'
+    node_tree.links.new(bool_156.outputs["Mesh"], xform_157.inputs["Geometry"])
+    node_tree.links.new(vec_158.outputs["Vector"], xform_157.inputs["Rotation"])
+    vec_160 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_160.location = (24000, 280)
+    vec_160.label = 'difference rotate rotate rotation'
+    vec_160.vector = [-1.5707963267948966, 0.0, 0.0]
+    xform_159 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_159.location = (24000, 0)
+    xform_159.label = 'difference rotate rotate'
+    node_tree.links.new(xform_157.outputs["Geometry"], xform_159.inputs["Geometry"])
+    node_tree.links.new(vec_160.outputs["Vector"], xform_159.inputs["Rotation"])
+    vec_162 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_162.location = (24300, 280)
+    vec_162.label = 'difference rotate rotate position offset'
+    vec_162.vector = [0, -33, -21.25]
+    setpos_161 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_161.location = (24300, 0)
+    setpos_161.label = 'difference rotate rotate position'
+    node_tree.links.new(xform_159.outputs["Geometry"], setpos_161.inputs["Geometry"])
+    node_tree.links.new(vec_162.outputs["Vector"], setpos_161.inputs["Offset"])
+    bool_163 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_163.location = (24600, 0)
+    bool_163.label = 'union'
+    bool_163.operation = "UNION"
+    try:
+        bool_163.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_163.solver = "EXACT"
+    node_tree.links.new(bool_120.outputs["Mesh"], bool_163.inputs[1])
+    node_tree.links.new(setpos_161.outputs["Geometry"], bool_163.inputs[1])
+    val_165 = node_tree.nodes.new("ShaderNodeValue")
+    val_165.location = (24900, 280)
+    val_165.label = 'union to_volume density'
+    val_165.outputs[0].default_value = 1.0
+    val_166 = node_tree.nodes.new("ShaderNodeValue")
+    val_166.location = (24900, 560)
+    val_166.label = 'union to_volume voxel_size'
+    val_166.outputs[0].default_value = 0.25
+    val_167 = node_tree.nodes.new("ShaderNodeValue")
+    val_167.location = (24900, 840)
+    val_167.label = 'union to_volume voxel_amount'
+    val_167.outputs[0].default_value = 64.0
+    val_168 = node_tree.nodes.new("ShaderNodeValue")
+    val_168.location = (24900, 1120)
+    val_168.label = 'union to_volume interior_band_width'
+    val_168.outputs[0].default_value = 0.5
+    geom_op_164 = node_tree.nodes.new("GeometryNodeMeshToVolume")
+    geom_op_164.location = (24900, 0)
+    geom_op_164.label = 'union to_volume'
+    node_tree.links.new(bool_163.outputs["Mesh"], geom_op_164.inputs["Mesh"])
+    node_tree.links.new(val_165.outputs["Value"], geom_op_164.inputs["Density"])
+    node_tree.links.new(val_166.outputs["Value"], geom_op_164.inputs["Voxel Size"])
+    node_tree.links.new(val_167.outputs["Value"], geom_op_164.inputs["Voxel Amount"])
+    node_tree.links.new(val_168.outputs["Value"], geom_op_164.inputs["Interior Band Width"])
+    val_170 = node_tree.nodes.new("ShaderNodeValue")
+    val_170.location = (25200, 280)
+    val_170.label = 'union to_volume vol_to_mesh voxel_size'
+    val_170.outputs[0].default_value = 0.25
+    val_171 = node_tree.nodes.new("ShaderNodeValue")
+    val_171.location = (25200, 560)
+    val_171.label = 'union to_volume vol_to_mesh voxel_amount'
+    val_171.outputs[0].default_value = 64.0
+    val_172 = node_tree.nodes.new("ShaderNodeValue")
+    val_172.location = (25200, 840)
+    val_172.label = 'union to_volume vol_to_mesh threshold'
+    val_172.outputs[0].default_value = 0.1
+    val_173 = node_tree.nodes.new("ShaderNodeValue")
+    val_173.location = (25200, 1120)
+    val_173.label = 'union to_volume vol_to_mesh adaptivity'
+    val_173.outputs[0].default_value = 0.0
+    geom_op_169 = node_tree.nodes.new("GeometryNodeVolumeToMesh")
+    geom_op_169.location = (25200, 0)
+    geom_op_169.label = 'union to_volume vol_to_mesh'
+    node_tree.links.new(geom_op_164.outputs["Volume"], geom_op_169.inputs["Volume"])
+    node_tree.links.new(val_170.outputs["Value"], geom_op_169.inputs["Voxel Size"])
+    node_tree.links.new(val_171.outputs["Value"], geom_op_169.inputs["Voxel Amount"])
+    node_tree.links.new(val_172.outputs["Value"], geom_op_169.inputs["Threshold"])
+    node_tree.links.new(val_173.outputs["Value"], geom_op_169.inputs["Adaptivity"])
+    val_175 = node_tree.nodes.new("ShaderNodeValue")
+    val_175.location = (25500, 280)
+    val_175.label = 'joint_blend_region radius'
+    val_175.outputs[0].default_value = 18
+    prim_174 = node_tree.nodes.new("GeometryNodeMeshUVSphere")
+    prim_174.location = (25500, 0)
+    prim_174.label = 'joint_blend_region'
+    node_tree.links.new(val_175.outputs["Value"], prim_174.inputs["Radius"])
+    prim_174.inputs["Segments"].default_value = 64
+    vec_177 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_177.location = (25800, 280)
+    vec_177.label = 'joint_blend_region position offset'
+    vec_177.vector = [0, -16, -15]
+    setpos_176 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_176.location = (25800, 0)
+    setpos_176.label = 'joint_blend_region position'
+    node_tree.links.new(prim_174.outputs["Mesh"], setpos_176.inputs["Geometry"])
+    node_tree.links.new(vec_177.outputs["Vector"], setpos_176.inputs["Offset"])
+    bool_178 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_178.location = (26100, 0)
+    bool_178.label = 'intersect'
+    bool_178.operation = "INTERSECT"
+    try:
+        bool_178.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_178.solver = "EXACT"
+    node_tree.links.new(geom_op_169.outputs["Mesh"], bool_178.inputs[1])
+    node_tree.links.new(setpos_176.outputs["Geometry"], bool_178.inputs[1])
+    bool_179 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_179.location = (26400, 0)
+    bool_179.label = 'union'
+    bool_179.operation = "UNION"
+    try:
+        bool_179.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_179.solver = "EXACT"
+    node_tree.links.new(bool_84.outputs["Mesh"], bool_179.inputs[1])
+    node_tree.links.new(bool_178.outputs["Mesh"], bool_179.inputs[1])
+    val_181 = node_tree.nodes.new("ShaderNodeValue")
+    val_181.location = (26700, 280)
+    val_181.label = 'h_cylinder_1 radius'
+    val_181.outputs[0].default_value = 13.0
+    val_182 = node_tree.nodes.new("ShaderNodeValue")
+    val_182.location = (26700, 560)
+    val_182.label = 'h_cylinder_1 depth'
+    val_182.outputs[0].default_value = 82
+    prim_180 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_180.location = (26700, 0)
+    prim_180.label = 'h_cylinder_1'
+    node_tree.links.new(val_181.outputs["Value"], prim_180.inputs["Radius"])
+    node_tree.links.new(val_182.outputs["Value"], prim_180.inputs["Depth"])
+    prim_180.inputs["Vertices"].default_value = 64
+    val_184 = node_tree.nodes.new("ShaderNodeValue")
+    val_184.location = (27000, 280)
+    val_184.label = 'h_cylinder_1 radius'
+    val_184.outputs[0].default_value = 13.0
+    val_185 = node_tree.nodes.new("ShaderNodeValue")
+    val_185.location = (27000, 560)
+    val_185.label = 'h_cylinder_1 depth'
+    val_185.outputs[0].default_value = 82
+    prim_183 = node_tree.nodes.new("GeometryNodeMeshCylinder")
+    prim_183.location = (27000, 0)
+    prim_183.label = 'h_cylinder_1'
+    node_tree.links.new(val_184.outputs["Value"], prim_183.inputs["Radius"])
+    node_tree.links.new(val_185.outputs["Value"], prim_183.inputs["Depth"])
+    prim_183.inputs["Vertices"].default_value = 64
+    vec_187 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_187.location = (27300, 280)
+    vec_187.label = 'h_cylinder_1 rotate rotation'
+    vec_187.vector = [0.0, 1.5707963267948966, 3.141592653589793]
+    xform_186 = node_tree.nodes.new("GeometryNodeTransform")
+    xform_186.location = (27300, 0)
+    xform_186.label = 'h_cylinder_1 rotate'
+    node_tree.links.new(prim_183.outputs["Mesh"], xform_186.inputs["Geometry"])
+    node_tree.links.new(vec_187.outputs["Vector"], xform_186.inputs["Rotation"])
+    vec_189 = node_tree.nodes.new("FunctionNodeInputVector")
+    vec_189.location = (27600, 280)
+    vec_189.label = 'h_cylinder_1 rotate position offset'
+    vec_189.vector = [0, -33, -21.25]
+    setpos_188 = node_tree.nodes.new("GeometryNodeSetPosition")
+    setpos_188.location = (27600, 0)
+    setpos_188.label = 'h_cylinder_1 rotate position'
+    node_tree.links.new(xform_186.outputs["Geometry"], setpos_188.inputs["Geometry"])
+    node_tree.links.new(vec_189.outputs["Vector"], setpos_188.inputs["Offset"])
+    bool_190 = node_tree.nodes.new("GeometryNodeMeshBoolean")
+    bool_190.location = (27900, 0)
+    bool_190.label = 'difference'
+    bool_190.operation = "DIFFERENCE"
+    try:
+        bool_190.solver = "EXACT"
+    except (TypeError, ValueError):
+        bool_190.solver = "EXACT"
+    node_tree.links.new(bool_179.outputs["Mesh"], bool_190.inputs[0])
+    node_tree.links.new(prim_180.outputs["Mesh"], bool_190.inputs[1])
+    node_tree.links.new(setpos_188.outputs["Geometry"], bool_190.inputs[1])
+    out_191 = node_tree.nodes.new("NodeGroupOutput")
+    out_191.location = (28200, 0)
+    out_191.label = "output"
+    node_tree.links.new(bool_190.outputs[0], out_191.inputs[0])
 
     return node_tree
 
