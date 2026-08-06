@@ -1,5 +1,6 @@
 import bpy
 import sys
+sys.path.insert(0, r"/home/egxn/Catcode/tanuki_apps/bellows_diecut/src")
 sys.path.insert(0, r"/home/egxn/Catcode/tanuki/src")
 
 

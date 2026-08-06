@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="80.00mm" height="60.00mm" viewBox="0 0 80.000 60.000">
+  <title>Accordion trapezoid pieces</title>
+  <rect width="100%" height="100%" fill="white" />
+  <polygon points="7.333,54.500 26.000,54.500 21.333,50.500 12.000,50.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,45.500 26.000,45.500 21.333,49.500 12.000,49.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,54.500 38.833,54.500 43.500,50.500 24.833,50.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,45.500 38.833,45.500 43.500,49.500 24.833,49.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,54.500 61.000,54.500 56.333,50.500 47.000,50.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,45.500 61.000,45.500 56.333,49.500 47.000,49.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,54.500 73.833,54.500 78.500,50.500 59.833,50.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,45.500 73.833,45.500 78.500,49.500 59.833,49.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,44.500 26.000,44.500 21.333,40.500 12.000,40.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,35.500 26.000,35.500 21.333,39.500 12.000,39.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,44.500 38.833,44.500 43.500,40.500 24.833,40.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,35.500 38.833,35.500 43.500,39.500 24.833,39.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,44.500 61.000,44.500 56.333,40.500 47.000,40.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,35.500 61.000,35.500 56.333,39.500 47.000,39.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,44.500 73.833,44.500 78.500,40.500 59.833,40.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,35.500 73.833,35.500 78.500,39.500 59.833,39.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,34.500 26.000,34.500 21.333,30.500 12.000,30.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,25.500 26.000,25.500 21.333,29.500 12.000,29.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,34.500 38.833,34.500 43.500,30.500 24.833,30.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,25.500 38.833,25.500 43.500,29.500 24.833,29.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,34.500 61.000,34.500 56.333,30.500 47.000,30.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,25.500 61.000,25.500 56.333,29.500 47.000,29.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,34.500 73.833,34.500 78.500,30.500 59.833,30.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,25.500 73.833,25.500 78.500,29.500 59.833,29.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,24.500 26.000,24.500 21.333,20.500 12.000,20.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,15.500 26.000,15.500 21.333,19.500 12.000,19.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,24.500 38.833,24.500 43.500,20.500 24.833,20.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,15.500 38.833,15.500 43.500,19.500 24.833,19.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,24.500 61.000,24.500 56.333,20.500 47.000,20.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,15.500 61.000,15.500 56.333,19.500 47.000,19.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,24.500 73.833,24.500 78.500,20.500 59.833,20.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,15.500 73.833,15.500 78.500,19.500 59.833,19.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,14.500 26.000,14.500 21.333,10.500 12.000,10.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="7.333,5.500 26.000,5.500 21.333,9.500 12.000,9.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,14.500 38.833,14.500 43.500,10.500 24.833,10.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="29.500,5.500 38.833,5.500 43.500,9.500 24.833,9.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,14.500 61.000,14.500 56.333,10.500 47.000,10.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="42.333,5.500 61.000,5.500 56.333,9.500 47.000,9.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,14.500 73.833,14.500 78.500,10.500 59.833,10.500" fill="none" stroke="black" stroke-width="0.2" />
+  <polygon points="64.500,5.500 73.833,5.500 78.500,9.500 59.833,9.500" fill="none" stroke="black" stroke-width="0.2" />
+</svg>

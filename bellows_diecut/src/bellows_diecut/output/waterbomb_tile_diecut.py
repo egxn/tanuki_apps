@@ -1,6 +1,6 @@
 import bpy
 import sys
-sys.path.insert(0, r"/home/egxn/Catcode/tanuki/src")
+sys.path.insert(0, r"/home/egxn/Catcode/tanuki_apps")
 
 
 def setup_waterbomb_tile_male(object_name='waterbomb_tile_male'):

@@ -1,6 +1,6 @@
 import bpy
 import sys
-sys.path.insert(0, r"/home/egxn/Catcode/tanuki/src")
+sys.path.insert(0, r"/home/egxn/Catcode/tanuki_apps")
 
 
 def setup_resch_roller_male(object_name='resch_roller_male'):

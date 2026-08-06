@@ -14,36 +14,36 @@ from __future__ import annotations
 from ..parameters import BellowsParams
 from ..core.geometry import FoldPattern, FoldType
 
-# Trapezoid geometry (template units): long base ``_L``, slant run ``_OFF`` →
-# short base ``_L − 2·_OFF``; band height ``_H``; x-period ``_P = 2·(_L − _OFF)``.
-_L, _OFF, _H = 4.0, 1.0, 3.0
-_P = 2.0 * (_L - _OFF)
-
-
-def _band(ox: float, oy: float, flip: bool, mountain: list, valley: list) -> None:
+def _band(ox: float, oy: float, flip: bool, mountain: list, valley: list,
+          long_base: float, offset: float, height: float) -> None:
     """One period (up + down trapezoid) of a band at offset ``(ox, oy)``."""
     def P(x: float, y: float):
-        return (ox + x, oy + (_H - y if flip else y))
+        return (ox + x, oy + (height - y if flip else y))
 
-    mountain += [(P(0.0, 0.0), P(_L, 0.0)),                 # up long base (bottom)
-                 (P(_L - _OFF, _H), P(_P + _OFF, _H))]      # down long base (top)
-    valley += [(P(_OFF, _H), P(_L - _OFF, _H)),             # up short base (top)
-               (P(_L, 0.0), P(_P, 0.0)),                    # down short base (bottom)
-               (P(0.0, 0.0), P(_OFF, _H)),                  # up left slant
-               (P(_L, 0.0), P(_L - _OFF, _H)),              # shared slant
-               (P(_P, 0.0), P(_P + _OFF, _H))]              # down right slant
+    period = 2.0 * (long_base - offset)
+    mountain += [(P(0.0, 0.0), P(long_base, 0.0)),
+                 (P(long_base - offset, height), P(period + offset, height))]
+    valley += [(P(offset, height), P(long_base - offset, height)),
+               (P(long_base, 0.0), P(period, 0.0)),
+               (P(0.0, 0.0), P(offset, height)),
+               (P(long_base, 0.0), P(long_base - offset, height)),
+               (P(period, 0.0), P(period + offset, height))]
 
 
 def generate(params: BellowsParams) -> FoldPattern:
     """Build the trapezoid accordion cell scaled by ``params.cell_scale``."""
     params.validate()
     s = params.cell_scale
+    long_base = params.accordion_long_base
+    offset = params.accordion_offset
+    height = params.accordion_band_height
+    period = 2.0 * (long_base - offset)
     mountain: list = []
     valley: list = []
-    _band(0.0, 0.0, flip=False, mountain=mountain, valley=valley)   # row 0
-    _band(0.0, _H, flip=True, mountain=mountain, valley=valley)     # row 1 (inverted)
+    _band(0.0, 0.0, False, mountain, valley, long_base, offset, height)
+    _band(0.0, height, True, mountain, valley, long_base, offset, height)
 
-    pat = FoldPattern(name="accordion", width=_P * s, height=2 * _H * s, seam=False)
+    pat = FoldPattern(name="accordion", width=period * s, height=2 * height * s, seam=False)
     for a, b in mountain:
         pat.add_fold((a[0] * s, a[1] * s), (b[0] * s, b[1] * s), FoldType.MOUNTAIN)
     for a, b in valley:

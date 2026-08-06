@@ -41,6 +41,7 @@ def build_roller(
     around: int | None = None,
     length: int | None = None,
     core_wall: float | None = None,
+    shape: dict | None = None,
 ):
     """Build a *side* roller solid (verts (M,3), faces (K,3)).
 
@@ -63,7 +64,7 @@ def build_roller(
 
     # Periodic strip — exactly one circumference wide, so the wrap meets itself
     # (brick / interlock tilings otherwise overhang the period as a flat seam).
-    pat, period = tessellate.tessellate_periodic(name, around, length)
+    pat, period = tessellate.tessellate_periodic(name, around, length, shape=shape)
     params = tessellate.tile_params(name)
     # wrap_period makes the relief periodic so the seam closes without a step
     pts, z, tris, boundary = foldcore.build_surface(pat, params, wrap_period=period)

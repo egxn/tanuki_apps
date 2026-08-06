@@ -26,6 +26,7 @@ PRINT_BED = 170.0        # mm (square)
 FABRIC_THICKNESS = 0.5   # mm
 PRESS_TOLERANCE = 0.3    # mm
 BASE_THICKNESS = 3.0     # mm — solid backing below the relief
+PLATE_EXTRA = 3.0        # mm — plate backing beyond the maximum fold relief
 
 #: Per-pattern tile size (mm), grid, and how the cells repeat:
 #: - ``square``: plain grid (Resch, Waterbomb);
@@ -44,9 +45,44 @@ TILE_SPECS: dict[str, dict] = {
     "kresling":  {"tile": (18.0, 12.0), "grid": (7, 14), "tiling": "square",
                   "pitch_x": 260.0 / 300.0},
     "resch":     {"tile": (20.0, 10.0), "grid": (6, 17), "tiling": "square"},
-    "accordion": {"tile": (24.0, 14.0), "grid": (6, 12), "tiling": "square"},
-    "accordion_corners": {"tile": (24.0, 14.0), "grid": (6, 12), "tiling": "square"},
+    "accordion": {"tile": (24.0, 14.0), "grid": (6, 12), "tiling": "square",
+                  "shape": {"accordion_long_base": 4.0, "accordion_offset": 1.0,
+                            "accordion_band_height": 3.0, "accordion_corner_folds": 0}},
+    "accordion_corners": {"tile": (24.0, 14.0), "grid": (6, 12), "tiling": "square",
+                          "shape": {"accordion_long_base": 4.0, "accordion_offset": 1.0,
+                                    "accordion_band_height": 3.0, "accordion_corner_folds": 2}},
 }
+
+
+def pattern_params(name: str) -> BellowsParams:
+    """Return the unit-cell parameters configured for *name*.
+
+    Accordion shape values live in ``TILE_SPECS[name]['shape']`` so the web
+    configuration and direct Python generation use exactly the same template.
+    """
+    shape = TILE_SPECS[name].get("shape", {})
+    return BellowsParams(cell_scale=1.0, **shape)
+
+
+def needs_edge_reinforcement(name: str) -> bool:
+    """Whether an oblique mountain crease reaches a tile's top/bottom edge.
+
+    Such a ridge terminates at the plate perimeter and benefits from a backing
+    thicker than the normal print base.  A crease that merely *runs along* the
+    perimeter (the accordion's horizontal mountain) is not a penetration and
+    must not trigger the extra thickness.
+    """
+    cell = patterns.generate(name, pattern_params(name))
+    _x0, y0, _x1, y1 = cell.bounds()
+    tol = max(cell.width, cell.height, 1.0) * 1e-8
+    for fold in cell.mountains:
+        on_lower = abs(fold.p0[1] - y0) < tol or abs(fold.p1[1] - y0) < tol
+        on_upper = abs(fold.p0[1] - y1) < tol or abs(fold.p1[1] - y1) < tol
+        along_lower = abs(fold.p0[1] - y0) < tol and abs(fold.p1[1] - y0) < tol
+        along_upper = abs(fold.p0[1] - y1) < tol and abs(fold.p1[1] - y1) < tol
+        if (on_lower or on_upper) and not (along_lower or along_upper):
+            return True
+    return False
 
 
 def tile_depth(tile_y: float) -> float:
@@ -58,6 +94,7 @@ def tessellate(
     name: str,
     tile: tuple[float, float] | None = None,
     grid: tuple[int, int] | None = None,
+    shape: dict | None = None,
 ) -> FoldPattern:
     """Build the tessellated :class:`FoldPattern` for *name*.
 
@@ -72,7 +109,13 @@ def tessellate(
     pitch_x = spec.get("pitch_x", 1.0) * tx       # horizontal step between columns
     pitch_y = spec.get("pitch_y", 1.0) * ty       # vertical step between rows
 
-    cell = patterns.generate(name, BellowsParams(cell_scale=1.0))
+    cell_params = pattern_params(name)
+    if shape:
+        values = cell_params.to_dict()
+        values.update(shape)
+        values["cell_scale"] = 1.0
+        cell_params = BellowsParams(**values)
+    cell = patterns.generate(name, cell_params)
     cw = max(cell.width, 1e-9)
     ch = max(cell.height, 1e-9)
 
@@ -145,7 +188,7 @@ def _wrap_segments_x(folds, period: float, x0: float):
     return out
 
 
-def tessellate_periodic(name: str, around: int, length: int):
+def tessellate_periodic(name: str, around: int, length: int, shape: dict | None = None):
     """Tessellation wrapped to exactly one circumference — returns ``(pattern, period)``.
 
     Like :func:`tessellate` over an ``around × length`` grid, but folded into a
@@ -155,7 +198,7 @@ def tessellate_periodic(name: str, around: int, length: int):
     spec = TILE_SPECS[name]
     tx, _ty = spec["tile"]
     period = roller_period(name, around)
-    base = tessellate(name, grid=(around, length))
+    base = tessellate(name, grid=(around, length), shape=shape)
     x0, y0, _x1, y1 = base.bounds()
     folds = [(fl.p0, fl.p1, fl.kind)
              for fl in base.mountains + base.valleys]
@@ -184,16 +227,24 @@ def tile_params(name: str, base_thickness: float | None = None) -> BellowsParams
     """
     spec = TILE_SPECS[name]
     _tx, ty = spec["tile"]
+    relief = spec.get("fold_height", tile_depth(ty))
+    configured_base = spec.get("base_thickness")
     return BellowsParams(
         material_thickness=FABRIC_THICKNESS,
-        ridge_height=spec.get("fold_height", tile_depth(ty)),
-        base_thickness=BASE_THICKNESS if base_thickness is None else base_thickness,
+        ridge_height=relief,
+        # Only edge-terminating, oblique mountains need a backing thicker than
+        # the normal print base.  Accordion mountains run along the perimeter,
+        # so they keep the compact default plate.
+        base_thickness=(base_thickness if base_thickness is not None else configured_base
+                        if configured_base is not None else max(BASE_THICKNESS, relief + PLATE_EXTRA)
+                        if needs_edge_reinforcement(name) else BASE_THICKNESS),
     )
 
 
 __all__ = [
     "TILE_SPECS", "PRINT_BED", "FABRIC_THICKNESS", "PRESS_TOLERANCE",
-    "BASE_THICKNESS",
-    "tile_depth", "tessellated_size", "tessellate", "tile_params",
+    "BASE_THICKNESS", "PLATE_EXTRA",
+    "tile_depth", "tessellated_size", "tessellate", "tile_params", "pattern_params",
+    "needs_edge_reinforcement",
     "roller_period", "tessellate_periodic",
 ]

@@ -54,7 +54,10 @@ def _snapshot() -> dict:
             "fold_height": spec.get("fold_height", _default_fold(name)),
             "repeats": spec["grid"][1] * uy,
             "around": spec["grid"][0] * ux,
+            "base_thickness": spec.get("base_thickness", tessellate.tile_params(name).base_thickness),
         }
+        if spec.get("shape"):
+            pats[name]["shape"] = copy.deepcopy(spec["shape"])
     return {"patterns": pats}
 
 
@@ -102,12 +105,38 @@ def apply_config(source: str | Path | dict | None) -> dict:
         ux, uy = _UNITS_PER_TILE.get(name, (1, 1))      # trapezoids per tile
         g0, g1 = spec["grid"]                           # (around, repeats) in tiles
         if p.get("around") is not None:
-            g0 = max(1, round(int(p["around"]) / ux))
+            requested = int(p["around"])
+            if requested < 1 or requested % ux:
+                raise ValueError(f"{name}.around must be a positive multiple of {ux}")
+            g0 = requested // ux
         if p.get("repeats") is not None:
-            g1 = max(1, round(int(p["repeats"]) / uy))
+            requested = int(p["repeats"])
+            if requested < 1 or requested % uy:
+                raise ValueError(f"{name}.repeats must be a positive multiple of {uy}")
+            g1 = requested // uy
         spec["grid"] = (g0, g1)
         if p.get("fold_height") is not None:
             spec["fold_height"] = float(p["fold_height"])
+        if p.get("base_thickness") is not None:
+            thickness = float(p["base_thickness"])
+            if thickness <= 0:
+                raise ValueError(f"{name}.base_thickness must be positive")
+            spec["base_thickness"] = thickness
+        if "shape" in p:
+            shape = p["shape"]
+            if not isinstance(shape, dict):
+                raise TypeError(f"patterns.{name}.shape must be an object")
+            allowed = {
+                "accordion_long_base", "accordion_offset", "accordion_band_height",
+                "accordion_corner_folds",
+            }
+            unknown = set(shape) - allowed
+            if unknown:
+                raise ValueError(f"Unknown accordion shape option(s): {sorted(unknown)}")
+            # Validate through the canonical parameter model before persisting.
+            from .parameters import BellowsParams
+            BellowsParams(cell_scale=1.0, **shape).validate()
+            spec["shape"] = {**spec.get("shape", {}), **shape}
     return cfg
 
 

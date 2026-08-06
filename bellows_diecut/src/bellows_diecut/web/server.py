@@ -23,7 +23,7 @@ from .. import (
     generate_rollers_gn,
 )
 from ..parameters import BellowsParams
-from ..core import tessellate, foldcore
+from ..core import tessellate, foldcore, exporter
 
 #: Single canonical output directory (the package ``output/``), so the web UI
 #: writes to one place regardless of the launch directory.
@@ -43,8 +43,23 @@ def _around(name: str) -> int:
     return tessellate.TILE_SPECS[name]["grid"][0]
 
 
+def _grid_counts(name: str, around: int | None, repeats: int) -> tuple[int, int]:
+    """Convert user-facing units to cell-grid counts without silent rounding."""
+    ux, uy = config._UNITS_PER_TILE.get(name, (1, 1))
+    requested_around = _around(name) * ux if around is None else int(around)
+    requested_repeats = int(repeats)
+    if requested_around < 1 or requested_repeats < 1:
+        raise ValueError("around and repeats must be positive integers")
+    if requested_around % ux or requested_repeats % uy:
+        raise ValueError(
+            f"{name} is built in {ux}×{uy} trapezoid cells: horizontal and vertical "
+            f"counts must be multiples of {ux} and {uy}, respectively."
+        )
+    return requested_around // ux, requested_repeats // uy
+
+
 def preview_mesh(name: str, tile_x: float, tile_y: float, fold_height: float,
-                 repeats: int = 3, around: int | None = None) -> dict:
+                 repeats: int = 3, around: int | None = None, shape: dict | None = None) -> dict:
     """Foldcore preview of a small patch: 3D mesh + flat crease lines + bbox.
 
     ``around`` (horizontal/circumference) and ``repeats`` (axial) are reflected —
@@ -53,11 +68,10 @@ def preview_mesh(name: str, tile_x: float, tile_y: float, fold_height: float,
     converted back to a grid here too.
     """
     from .. import config
-    ux, uy = config._UNITS_PER_TILE.get(name, (1, 1))
-    around_tiles = (_around(name) if around is None else max(1, round(int(around) / ux)))
-    along = max(1, min(max(1, round(int(repeats) / uy)), 8))
+    around_tiles, along = _grid_counts(name, around, repeats)
+    along = min(along, 8)
     a = min(around_tiles, 6)
-    pat = tessellate.tessellate(name, tile=(tile_x, tile_y), grid=(max(1, a), along))
+    pat = tessellate.tessellate(name, tile=(tile_x, tile_y), grid=(max(1, a), along), shape=shape)
     params = BellowsParams(
         material_thickness=tessellate.FABRIC_THICKNESS,
         ridge_height=float(fold_height),
@@ -77,6 +91,32 @@ def preview_mesh(name: str, tile_x: float, tile_y: float, fold_height: float,
             "lines": lines, "bbox": [x0, y0, x1, y1]}
 
 
+def preview_roller(name: str, side: str, around: int | None, repeats: int,
+                   shape: dict | None = None, tile_x: float | None = None,
+                   tile_y: float | None = None, fold_height: float | None = None) -> dict:
+    """Return a print-geometry roller mesh for the interactive preview."""
+    from ..core import roller
+    around_tiles, length = _grid_counts(name, around, repeats)
+    # ``roller`` reads its tile dimensions from the configured spec.  Scope the
+    # temporary preview settings under the same lock as generation so a browser
+    # preview cannot leak values into an export job.
+    ux, _uy = config._UNITS_PER_TILE.get(name, (1, 1))
+    preview_cfg = {"patterns": {name: {"tile": [tile_x, tile_y],
+                                        "fold_height": fold_height,
+                                        "repeats": repeats,
+                                        "around": around_tiles * ux,
+                                        **({"shape": shape} if shape else {})}}}
+    with _GEN_LOCK:
+        try:
+            config.apply_config(preview_cfg)
+            verts, faces = roller.build_roller(name, side=side, around=around_tiles,
+                                               length=length, shape=shape)
+        finally:
+            config.reset()
+    return {"positions": [float(v) for xyz in verts for v in xyz],
+            "indices": [int(i) for face in faces for i in face]}
+
+
 def _pattern_config() -> dict:
     cfg = config.current()["patterns"]
     return {n: cfg[n] for n in PATTERNS}
@@ -88,11 +128,16 @@ def _run_generation(job_id: str, body: dict, out_root: Path) -> None:
     try:
         name = body["pattern"]
         bake = bool(body.get("bake", False))
+        trapezoids = bool(body.get("trapezoids_svg", False)) and name.startswith("accordion")
+        trapezoid_gap = float(body.get("trapezoid_gap", 2.0))
         pat_cfg = {
             "tile": [float(body["tile_x"]), float(body["tile_y"])],
             "fold_height": float(body["fold_height"]),
+            "base_thickness": float(body["base_thickness"]),
             "repeats": int(body["repeats"]),
         }
+        if "shape" in body:
+            pat_cfg["shape"] = body["shape"]
         around = body.get("around")
         if around not in (None, "", "auto") and int(float(around)) > 0:
             pat_cfg["around"] = int(float(around))   # blank/0 → keep auto count
@@ -102,13 +147,23 @@ def _run_generation(job_id: str, body: dict, out_root: Path) -> None:
                 config.apply_config(cfg)
                 spec = tessellate.TILE_SPECS[name]      # effective (incl. auto around)
                 ux, uy = config._UNITS_PER_TILE.get(name, (1, 1))
+                _grid_counts(name, spec["grid"][0] * ux, spec["grid"][1] * uy)
                 effective = {"tile": list(spec["tile"]),
                              "fold_height": spec.get("fold_height"),
+                             "base_thickness": tessellate.tile_params(name).base_thickness,
                              "around": spec["grid"][0] * ux,
                              "repeats": spec["grid"][1] * uy}
                 # OBJ/SVG/JSON/DSL always; STL written natively (no Blender needed)
                 generate_tessellation(name, out_root, bake=False)
+                if trapezoids:
+                    exporter.export_accordion_trapezoids_svg(
+                        out_root / "svg" / f"{name}_trapezoids.svg",
+                        (float(body["tile_x"]), float(body["tile_y"])),
+                        (spec["grid"][0], spec["grid"][1]), body.get("shape"), trapezoid_gap,
+                    )
                 generate_rollers(name, out_root, bake=False)
+                from ..core import roller_stand
+                roller_stand.generate_script(name, out_root, spec["grid"][0], spec["grid"][1])
                 generate_rollers_gn(name, out_root)
                 if bake:
                     from ..core import roller as _roller
@@ -162,8 +217,19 @@ def make_app(output_dir: str | Path = DEFAULT_OUTPUT):
             if url.path == "/":
                 return self._send(200, INDEX_HTML, "text/html; charset=utf-8")
             if url.path == "/api/patterns":
-                return self._json(200, {"patterns": list(PATTERNS),
-                                        "config": _pattern_config()})
+                recommendations = {
+                    "accordion": {"label": "Recomendado · fuelle axial", "tier": "recommended"},
+                    "accordion_corners": {"label": "Experimental · esquinas", "tier": "experimental"},
+                    "yoshimura": {"label": "Experimental · mayor rigidez", "tier": "experimental"},
+                    "miura": {"label": "Experimental · no priorizar", "tier": "experimental"},
+                    "waterbomb": {"label": "Experimental · no axial", "tier": "experimental"},
+                    "kresling": {"label": "Experimental · torsión", "tier": "experimental"},
+                    "resch": {"label": "Experimental · bistable", "tier": "experimental"},
+                }
+                stable_order = ["accordion", "accordion_corners", "yoshimura",
+                                "miura", "waterbomb", "kresling", "resch"]
+                return self._json(200, {"patterns": stable_order,
+                                        "config": _pattern_config(), "recommendations": recommendations})
             if url.path == "/api/tile":
                 q = parse_qs(url.query)
                 try:
@@ -176,8 +242,25 @@ def make_app(output_dir: str | Path = DEFAULT_OUTPUT):
                     aro = int(float(aro)) if aro not in ("", "auto") else None
                     if aro is not None and aro <= 0:       # blank/0 → auto
                         aro = None
-                    return self._json(200, preview_mesh(name, tx, ty, fold, rep, aro))
+                    shape = json.loads(q.get("shape", ["null"])[0])
+                    return self._json(200, preview_mesh(name, tx, ty, fold, rep, aro, shape))
                 except Exception as exc:               # surface errors to the UI
+                    return self._json(400, {"error": str(exc)})
+            if url.path == "/api/roller":
+                q = parse_qs(url.query)
+                try:
+                    name = q.get("pattern", ["accordion"])[0]
+                    side = q.get("side", ["male"])[0]
+                    tx = float(q.get("tile_x", ["16"])[0])
+                    ty = float(q.get("tile_y", ["16"])[0])
+                    fold = float(q.get("fold_height", ["6"])[0])
+                    rep = int(float(q.get("repeats", ["12"])[0]))
+                    aro = q.get("around", [""])[0]
+                    aro = int(float(aro)) if aro not in ("", "auto") else None
+                    shape = json.loads(q.get("shape", ["null"])[0])
+                    return self._json(200, preview_roller(name, side, aro, rep, shape,
+                                                           tx, ty, fold))
+                except Exception as exc:
                     return self._json(400, {"error": str(exc)})
             if url.path.startswith("/api/job/"):
                 job = _JOBS.get(url.path.rsplit("/", 1)[-1])
@@ -309,20 +392,39 @@ INDEX_HTML = r"""<!doctype html>
   <h1>Bellows Diecut</h1>
   <label>Pattern</label>
   <select id="pattern"></select>
+  <label>Preview</label>
+  <select id="view_mode"><option value="tile">Patrón plegado</option><option value="roller_male">Rodillo macho</option><option value="roller_female">Rodillo hembra</option></select>
+  <button class="sec" id="reload" style="margin-top:8px">↻ Recargar vista previa</button>
   <div class="row">
     <div><label>Tile X (mm)</label><input id="tile_x" type="number" step="0.5" min="1"></div>
     <div><label>Tile Y (mm)</label><input id="tile_y" type="number" step="0.5" min="1"></div>
   </div>
   <label>Fold height — mountain (mm)</label>
   <input id="fold_height" type="number" step="0.5" min="0.1">
+  <label>Base / techo de plancha (mm)</label>
+  <input id="base_thickness" type="number" step="0.5" min="0.1">
   <div class="row">
     <div><label id="lab_around">Tiles around (horizontal)</label><input id="around" type="number" step="1" min="1"></div>
     <div><label id="lab_repeats">Repeats (height)</label><input id="repeats" type="number" step="1" min="1"></div>
   </div>
   <div class="hint" id="count_hint">Tiles around defaults to the pattern's automatic circumference count.</div>
+  <div id="accordion_shape">
+    <label>Base larga del trapecio</label><input id="accordion_long_base" type="number" step="0.1" min="0.1">
+    <label>Offset lateral / base corta</label><input id="accordion_offset" type="number" step="0.1" min="0.01">
+    <label>Altura de banda</label><input id="accordion_band_height" type="number" step="0.1" min="0.1">
+    <label>Pliegues verticales de esquina</label><select id="accordion_corner_folds"><option value="0">Ninguno</option><option value="1">Uno centrado</option><option value="2">Dos, en las esquinas</option></select>
+    <div class="hint">La base corta se deriva como base larga − 2 × offset.</div>
+  </div>
   <label style="display:flex;align-items:center;gap:8px;text-transform:none;margin-top:14px;color:#cdd;">
     <input type="checkbox" id="bake" style="width:auto;"> Export STL files (roller solids, ready to print)
   </label>
+  <div id="trapezoid_export" style="display:none">
+    <label style="display:flex;align-items:center;gap:8px;text-transform:none;margin-top:14px;color:#cdd;">
+      <input type="checkbox" id="trapezoids_svg" style="width:auto;"> Exportar trapecios separados (SVG)
+    </label>
+    <label>Espacio entre trapecios (mm)</label><input id="trapezoid_gap" type="number" step="0.1" min="0" value="2">
+    <div class="hint">Piezas independientes para cortar con Cricut o usar como plantilla sobre tela.</div>
+  </div>
   <button id="gen">Generate rollers + output</button>
   <div id="status"></div>
   <div id="files"></div>
@@ -371,7 +473,8 @@ async function loadGL() {
     (function loop(){ requestAnimationFrame(loop); controls.update(); renderer.render(scene,camera); })();
     GL = { attach(){ view.innerHTML=''; view.appendChild(renderer.domElement); },
       setMesh(pos,idx){ if(mesh){scene.remove(mesh); mesh.geometry.dispose();}
-        const g=new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos,3));
+        const g=new THREE.BufferGeometry();
+        g.setAttribute('position', new THREE.Float32BufferAttribute(pos,3));
         g.setIndex(idx); g.computeVertexNormals(); g.center();
         mesh=new THREE.Mesh(g, new THREE.MeshStandardMaterial({color:0xbfc4cc,metalness:0.1,roughness:0.7,side:THREE.DoubleSide,flatShading:true}));
         scene.add(mesh); g.computeBoundingSphere(); const r=g.boundingSphere.radius||60;
@@ -380,11 +483,17 @@ async function loadGL() {
 }
 
 function render(d) { LAST = d;
-  if (GL) { GL.attach(); GL.setMesh(d.positions, d.indices); } else { draw2D(d); } }
+  if (GL) { GL.attach(); GL.setMesh(d.positions, d.indices); }
+  else if (d.lines) { draw2D(d); }
+  else { view.innerHTML = '<div class="hint" style="padding:24px">La vista de rodillo requiere WebGL / three.js.</div>'; } }
 
 async function preview() {
   const q = new URLSearchParams({pattern:$('pattern').value, tile_x:$('tile_x').value, tile_y:$('tile_y').value, fold_height:$('fold_height').value, repeats:$('repeats').value, around:$('around').value});
-  try { const d = await (await fetch('/api/tile?'+q)).json();
+  const mode = $('view_mode').value;
+  const shape = shapeFor($('pattern').value); if (shape) q.set('shape', JSON.stringify(shape));
+  if (mode !== 'tile') { q.set('side', mode === 'roller_male' ? 'male' : 'female'); }
+  const endpoint = mode === 'tile' ? '/api/tile?' : '/api/roller?';
+  try { const d = await (await fetch(endpoint+q)).json();
     if (d.error) { $('status').textContent = 'Preview error: '+d.error; return; }
     render(d); $('status').textContent = '';
   } catch(e) { $('status').textContent = 'Preview error: '+e; }
@@ -392,22 +501,42 @@ async function preview() {
 
 function fillFor(p) { const c = CFG[p];
   $('tile_x').value=c.tile[0]; $('tile_y').value=c.tile[1]; $('fold_height').value=c.fold_height;
+  $('base_thickness').value=c.base_thickness;
   $('repeats').value=c.repeats; $('around').value=c.around;
   const trap = p.startsWith('accordion');
   $('lab_around').textContent = trap ? 'Trapezoids horizontal' : 'Tiles around (horizontal)';
   $('lab_repeats').textContent = trap ? 'Trapezoids vertical' : 'Repeats (height)';
   $('count_hint').textContent = trap
-    ? 'Number of trapezoids around the circumference and along the height.'
+    ? 'Los conteos deben ser múltiplos de 2: cada celda contiene 2×2 trapecios.'
     : "Tiles around defaults to the pattern's automatic circumference count."; }
+
+function fillShape(p) { const trap = p.startsWith('accordion');
+  $('accordion_shape').style.display = trap ? '' : 'none';
+  $('trapezoid_export').style.display = trap ? '' : 'none';
+  if (!trap) return;
+  const s = CFG[p].shape || {};
+  $('accordion_long_base').value = s.accordion_long_base ?? 4;
+  $('accordion_offset').value = s.accordion_offset ?? 1;
+  $('accordion_band_height').value = s.accordion_band_height ?? 3;
+  $('accordion_corner_folds').value = s.accordion_corner_folds ?? (p === 'accordion_corners' ? 2 : 0);
+  $('accordion_corner_folds').parentElement.style.display = p === 'accordion_corners' ? '' : 'none'; }
+
+function shapeFor(p) { if (!p.startsWith('accordion')) return undefined;
+  return {accordion_long_base:+$('accordion_long_base').value,
+          accordion_offset:+$('accordion_offset').value,
+          accordion_band_height:+$('accordion_band_height').value,
+          accordion_corner_folds:+$('accordion_corner_folds').value}; }
 
 async function init() {
   await loadGL();
   const d = await (await fetch('/api/patterns')).json(); CFG = d.config;
   const sel = $('pattern');
-  d.patterns.forEach(p => { const o=document.createElement('option'); o.value=o.textContent=p; sel.appendChild(o); });
-  sel.onchange = () => { fillFor(sel.value); preview(); };
-  ['tile_x','tile_y','fold_height','repeats','around'].forEach(id => $(id).addEventListener('change', preview));
-  fillFor(sel.value); preview();
+  d.patterns.forEach(p => { const o=document.createElement('option'); o.value=p; o.textContent=p+' — '+d.recommendations[p].label; sel.appendChild(o); });
+  sel.onchange = () => { fillFor(sel.value); fillShape(sel.value); preview(); };
+  ['tile_x','tile_y','fold_height','base_thickness','repeats','around','view_mode'].forEach(id => $(id).addEventListener('change', preview));
+  ['accordion_long_base','accordion_offset','accordion_band_height','accordion_corner_folds'].forEach(id => $(id).addEventListener('change', preview));
+  fillFor(sel.value); fillShape(sel.value); preview();
+  $('reload').onclick = preview;
   addEventListener('resize', () => { if (!GL && LAST) draw2D(LAST); });
 
   $('gen').onclick = async () => {
@@ -415,8 +544,11 @@ async function init() {
     const bake = $('bake').checked;
     $('status').textContent = bake ? 'Generating + writing STL files…' : 'Generating…';
     const body = {pattern:sel.value, tile_x:+$('tile_x').value, tile_y:+$('tile_y').value,
-                  fold_height:+$('fold_height').value, repeats:+$('repeats').value,
-                  around:+$('around').value, bake};
+                  fold_height:+$('fold_height').value, base_thickness:+$('base_thickness').value, repeats:+$('repeats').value,
+                  around:+$('around').value, bake,
+                  trapezoids_svg: $('trapezoids_svg').checked,
+                  trapezoid_gap: +$('trapezoid_gap').value};
+    const shape = shapeFor(sel.value); if (shape) body.shape = shape;
     try {
       const r = await (await fetch('/api/generate', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)})).json();
       if (!r.job_id) { $('status').textContent = 'Error: '+(r.error||'no job'); $('gen').disabled=false; return; }
@@ -426,7 +558,7 @@ async function init() {
           const p = j.params || {};
           $('status').textContent = (j.baked ? '✓ baked + wrote ' : '✓ wrote ') + j.files.length
             + ' files\nused: tile ' + (p.tile? p.tile.join('×'):'?') + 'mm, fold ' + p.fold_height
-            + 'mm, around ' + p.around + ', repeats ' + p.repeats + '\n→ ' + j.dir;
+            + 'mm, base ' + p.base_thickness + 'mm, around ' + p.around + ', repeats ' + p.repeats + '\n→ ' + j.dir;
           $('files').innerHTML = j.files.map(f => (f.endsWith('.stl') ? '<b>• '+f+'</b>' : '• '+f)).join('<br>'); }
         else if (j.status === 'error') { clearInterval(poll); $('gen').disabled = false; $('status').textContent = 'Error: '+j.error; }
       }, 1200);

@@ -49,6 +49,12 @@ class BellowsParams:
     margin: float = 10.0
     pin_radius: float = 2.5
     pin_height: float = 6.0
+    # Accordion template ratios.  They are dimensionless template units: the
+    # tessellator normalises the resulting cell to the requested tile size.
+    accordion_long_base: float = 4.0
+    accordion_offset: float = 1.0
+    accordion_band_height: float = 3.0
+    accordion_corner_folds: int = 2
 
     def validate(self) -> None:
         """Raise ``ValueError`` if any parameter is physically nonsensical."""
@@ -66,6 +72,12 @@ class BellowsParams:
                 raise ValueError(f"{fld} must be positive when set.")
         if self.margin < 0:
             raise ValueError("margin must be non-negative.")
+        if self.accordion_long_base <= 0 or self.accordion_band_height <= 0:
+            raise ValueError("accordion_long_base and accordion_band_height must be positive.")
+        if not 0 < self.accordion_offset < self.accordion_long_base / 2:
+            raise ValueError("accordion_offset must be between 0 and half accordion_long_base.")
+        if self.accordion_corner_folds not in (0, 1, 2):
+            raise ValueError("accordion_corner_folds must be 0, 1, or 2.")
 
     def to_dict(self) -> dict:
         """Serialise to a plain dict (used by the JSON exporter)."""

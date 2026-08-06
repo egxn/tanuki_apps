@@ -37,9 +37,11 @@ _SVG_STYLE = {
     FoldType.BOUNDARY: ("#000000", "none", 0.8),    # black solid
 }
 
-#: Repository source root (the directory that contains the ``tanuki`` package).
-#: Embedded into generated scripts so Blender can ``import tanuki`` standalone.
-_SRC_ROOT = Path(__file__).resolve().parents[4]
+#: Sources Blender must see when it runs a generated script outside the venv.
+#: ``_PACKAGE_SRC`` contains ``bellows_diecut``; Tanuki lives in the sibling
+#: repository and is needed by ``bellows_diecut.core.exporter`` during baking.
+_PACKAGE_SRC = Path(__file__).resolve().parents[2]
+_TANUKI_SRC = Path(__file__).resolve().parents[5] / "tanuki" / "src"
 
 
 # ---------------------------------------------------------------------------
@@ -73,7 +75,11 @@ def export_bpy_script(
     base = path.read_text()
 
     # PATH line — insert right after the leading ``import bpy``.
-    header = f'import sys\nsys.path.insert(0, r"{_SRC_ROOT}")\n'
+    header = (
+        "import sys\n"
+        f'sys.path.insert(0, r"{_PACKAGE_SRC}")\n'
+        f'sys.path.insert(0, r"{_TANUKI_SRC}")\n'
+    )
     if base.startswith("import bpy"):
         first, _, rest = base.partition("\n")
         base = f"{first}\n{header}{rest}"
@@ -221,6 +227,61 @@ def export_svg(pattern: FoldPattern, path: str | Path, padding: float = 5.0) -> 
     return path
 
 
+def export_accordion_trapezoids_svg(
+    path: str | Path, tile: tuple[float, float], grid: tuple[int, int],
+    shape: dict | None = None, gap: float = 2.0, padding: float = 5.0,
+) -> Path:
+    """Write the accordion's individual trapezoids as cuttable SVG pieces.
+
+    ``gap`` is the clear space between neighbouring pieces.  The pieces are
+    kept in their original pattern positions and inset towards their centroid,
+    which also makes the result useful for printing fabric templates.
+    """
+    if gap < 0:
+        raise ValueError("trapezoid gap must be non-negative")
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    shape = shape or {}
+    long_base = float(shape.get("accordion_long_base", 4.0))
+    offset = float(shape.get("accordion_offset", 1.0))
+    band_height = float(shape.get("accordion_band_height", 3.0))
+    period = 2.0 * (long_base - offset)
+    cell_w, cell_h = period, 2.0 * band_height
+    tx, ty = map(float, tile)
+    nx, ny = map(int, grid)
+    pieces: list[list[tuple[float, float]]] = []
+    base = [
+        [(0, 0), (long_base, 0), (long_base - offset, band_height), (offset, band_height)],
+        [(long_base, 0), (period, 0), (period + offset, band_height), (long_base - offset, band_height)],
+    ]
+    for j in range(ny):
+        for i in range(nx):
+            for raw in base:
+                for flip_y in (False, True):
+                    poly = []
+                    for x, y in raw:
+                        yy = (band_height - y if flip_y else y) + (band_height if flip_y else 0)
+                        poly.append(((i * tx) + x / cell_w * tx,
+                                     (j * ty) + yy / cell_h * ty))
+                    cx = sum(p[0] for p in poly) / 4
+                    cy = sum(p[1] for p in poly) / 4
+                    # A centroid inset is stable for all trapezoid orientations.
+                    scale = max(0.0, 1.0 - gap / max(min(tx, ty), 1e-9))
+                    pieces.append([(cx + (x - cx) * scale, cy + (y - cy) * scale) for x, y in poly])
+    width, height = nx * tx + 2 * padding, ny * ty + 2 * padding
+    def point(p): return f"{p[0] + padding:.3f},{height - (p[1] + padding):.3f}"
+    svg = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width:.2f}mm" height="{height:.2f}mm" viewBox="0 0 {width:.3f} {height:.3f}">',
+        '  <title>Accordion trapezoid pieces</title>',
+        '  <rect width="100%" height="100%" fill="white" />',
+    ]
+    svg += [f'  <polygon points="{" ".join(point(p) for p in poly)}" fill="none" stroke="black" stroke-width="0.2" />' for poly in pieces]
+    svg.append('</svg>')
+    path.write_text("\n".join(svg) + "\n")
+    return path
+
+
 # ---------------------------------------------------------------------------
 # JSON (full parametric description)
 # ---------------------------------------------------------------------------
@@ -321,6 +382,7 @@ __all__ = [
     "bake_molds",
     "export_obj",
     "export_svg",
+    "export_accordion_trapezoids_svg",
     "export_json",
     "export_all",
 ]
