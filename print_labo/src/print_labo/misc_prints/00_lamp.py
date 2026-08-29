@@ -4,21 +4,21 @@ from math import cos, radians, sin
 tolerance = 0.125
 wood = 25.5
 joint = wood + 10
-joint_vertices = 32
+joint_vertices = 64
 r_screw = 4
 
-def build_cylinder(use_tap=True, h_tap_width=10, coupler_height=60):
+def build_cylinder(use_tap=True, h_tap_width=10, coupler_height=40, tap_bridge_tolerance=0, joint_vertices=joint_vertices):
         coupler_1 = cylinder(joint/2, coupler_height, "coupler_1", vertices=joint_vertices)
 
-        tap = cube(20, 42, 20, "tap")
-        tap_bridge = cube(28, 6, coupler_height, "tap_bridge")
+        tap = cube(20 + tap_bridge_tolerance, 20.5, 20, "tap")
+        tap_bridge = cube(28 + tap_bridge_tolerance, 6 + tap_bridge_tolerance, coupler_height, "tap_bridge")
 
         if use_tap:
             coupler_1 = union([
                 coupler_1,
-                tap | place(0, wood/2, 20),
-                tap | place(0, wood/2, -20),
-                tap_bridge | place(0, 15 , 0)
+                tap | place(0, wood/2, 10),
+                tap | place(0, wood/2, -10),
+                tap_bridge | place(0, 20 , 0)
             ])
 
         h_coupler_1 = cylinder(wood/2 + tolerance * 2, coupler_height, "h_coupler_1", vertices=64)
@@ -30,25 +30,46 @@ def build_cylinder(use_tap=True, h_tap_width=10, coupler_height=60):
             h_tap | place(0, wood/2 + 5, 0)
         ])
 
-        coupler_1 = difference(coupler_1, [
-            cylinder(r_screw, 40, "coupler_2", vertices=124) | rotate(0, 90, 0) | place(0, 25,  20),
-            cylinder(r_screw, 40, "coupler_3", vertices=124) | rotate(0, 90, 0) | place(0, 25, -20)
-        ])
 
         return coupler_1
+    
+def build_cylinder_seal():
+    with model("coupler_seal") as ctx:    
+        h_coupler = build_cylinder(tap_bridge_tolerance=tolerance*2)
+        seal = cube(35, 10, 40, "seal") | place(0, 20 , 0)
+        seal = difference(seal, [h_coupler]) | place(0, 0, 500)
+    
+        output(seal)
+    return ctx.graph
 
-def create_tube_support():
-    with model("wood_join") as ctx:
+def create_tube_support_y():
+    with model("wood_join_y") as ctx:
         coupler_1 = build_cylinder()
-        coupler_2 = coupler_1 | rotate(0, 90, 180) | rotate(-90, 0, 0) | place(0, -33, -11.25)
-
+        coupler_2 = cylinder(joint/4, 25, "coupler_2_1", vertices=8)
+        
         coupler_1 = union([
             coupler_1,
-            coupler_2,
+            coupler_2 | rotate(0, 90 , 0) | place(26, 0, 0) ,
         ]) | place(0, 0, 500)
 
         output(coupler_1)
     return ctx.graph
+
+def create_tube_support_x():
+    with model("wood_join_x") as ctx:
+        coupler_1 = build_cylinder()
+        coupler_2 = cylinder(joint/3, 25, "coupler_2_1") | rotate(0, 90 , 0) | place(26, 0, 0) 
+        h_coupler_2 = cylinder(joint/4 + tolerance*4, 25, "coupler_2_1", vertices=8) | rotate(0, 90 , 0) | place(26, 0, 0)
+        coupler_2 = difference(coupler_2, [h_coupler_2])
+      
+        coupler_1 = union([
+            coupler_1,
+            coupler_2,
+        ])  | rotate(90, 0 ,180) | place(57, 0, 500)
+
+        output(coupler_1)
+    return ctx.graph
+
 
 def create_base():
     with model("base") as ctx:
@@ -86,6 +107,47 @@ def create_base():
         output(base)
     return ctx.graph
 
+def create_base_2():
+    with model("base_2") as ctx:
+        def create_half_spehere(thickness = 0):
+            half_sphere = sphere(50 - thickness, "half sphere", 4, 6) | rotate(0 , 0, 45)
+            h_sphere = cube(120 + thickness * 2, 120 + thickness * 2, 80 + thickness * 2, "h sphere") | place(0, 0, -47)
+            half_sphere = difference(half_sphere, [h_sphere]) | place(0, 0, -10)
+            
+            return half_sphere
+
+        coupler_1 = build_cylinder(joint_vertices=10) | rotate(90, 0 ,0) | place(0, 50, 0)
+        coupler_2 = build_cylinder(joint_vertices=10) | rotate(90, 0, 0) | place(0, -50, 0)
+        coupler_3 = build_cylinder(joint_vertices=10) | rotate(90, 0, 90) | place(50, 0, 0)
+        coupler_4 = build_cylinder(joint_vertices=10) | rotate(90, 0, 90) | place(-50, 0, 0)
+
+        anti_slop = cylinder(4, 4, "anti_slop")
+
+        half_sphere = difference(
+            create_half_spehere(),
+            [
+                create_half_spehere(5),
+                cylinder(wood/2 + tolerance * 2, 200, "h_coupler_1", vertices=64) | rotate(0, 90, 90),
+                cylinder(wood/2 + tolerance * 2, 200, "h_coupler_1", vertices=64) | rotate(90, 0, 90),
+                anti_slop | place(25, 25, -15),
+                anti_slop | place(25, -25, -15),
+                anti_slop | place(-25, -25, -15),
+                anti_slop | place(-25, 25, -15),
+            ]
+        )
+
+        base = union([
+            half_sphere,
+            coupler_1,
+            coupler_2,
+            coupler_3,
+            coupler_4
+        ])
+        
+        output(base)
+
+    return ctx.graph
+
 def create_rods():
     with model("lamp") as ctx:
         rod_1 = cylinder(wood/2, 600, "rod_1", vertices=joint_vertices) | place(0, 0, 300)
@@ -114,9 +176,11 @@ def create_rods():
     return ctx.graph
 
 ALL_PARTS = [
-    create_tube_support(),
-    create_base(),
-    create_rods()
+    create_tube_support_x(),
+    create_tube_support_y(),
+    build_cylinder_seal(),
+    create_base_2()
+    # create_rods()
 ]
 
 if __name__ == "__main__":

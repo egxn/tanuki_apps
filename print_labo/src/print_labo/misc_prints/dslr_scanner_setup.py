@@ -159,20 +159,17 @@ ALL_PARTS = [
     create_film_slider_2(),
 ]
 
+
 if __name__ == "__main__":
-    import argparse
-    from tanuki.dsl.export import combined_export, individual_export
+    from pathlib import Path
 
-    parser = argparse.ArgumentParser(description="DSLR scanner setup")
-    parser.add_argument("--mode", choices=["combined", "individual"], default="combined")
-    parser.add_argument("--output", default=None)
-    args = parser.parse_args()
+    from print_labo.utils.compile_cli import run_compile_cli
 
-    if args.mode == "combined":
-        out = args.output or "dslr_scanner_setup_gen.py"
-        path = combined_export(ALL_PARTS, out)
-        print(f"Generated {len(ALL_PARTS)} parts in {path} ({path.stat().st_size // 1024} KB)")
-    else:
-        out = args.output or "dslr_scanner_setup_gen"
-        written = individual_export(ALL_PARTS, out)
-        print(f"Generated {len(written)} files in {out}/")
+    run_compile_cli(
+        graphs=ALL_PARTS,
+        description="Compile dslr scanner setup",
+        source_script=Path(__file__).resolve(),
+        default_output="dslr_scanner.py",
+        default_output_dir="dslr_scanner",
+        watch_base_dir=Path(__file__).resolve().parent,
+    )

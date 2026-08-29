@@ -1,5 +1,4 @@
 import bpy
-import os
 
 
 def setup_wood_join_x(object_name='wood_join_x'):

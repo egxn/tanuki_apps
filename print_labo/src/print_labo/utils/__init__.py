@@ -1,7 +1,24 @@
 __all__ = [
     "install_dev_mode",
     "run_dev_mode",
+    "FlatSpringSpec",
+    "generate_flat_spring_svg",
+    "flat_spring",
+    "flat_spring_outline",
+    "evaluate_flat_spring_route",
+    "flat_spring_svg",
+    "write_flat_spring_svg",
 ]
+
+from .flat_spring import (
+    FlatSpringSpec,
+    flat_spring_svg,
+    flat_spring,
+    flat_spring_outline,
+    evaluate_flat_spring_route,
+    generate_flat_spring_svg,
+    write_flat_spring_svg,
+)
 
 try:
     from .gear_generator import (

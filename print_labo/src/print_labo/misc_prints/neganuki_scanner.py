@@ -276,35 +276,21 @@ ALL_PARTS = [
     create_film_slider,
     create_film_slider_2,
     # create_sprocket_gear,
-    create_dummy_film,
+    # create_dummy_film,
     # create_lens_support,
     create_film_slider_3,
 ]
 
 if __name__ == "__main__":
-    import argparse
-    from tanuki.dsl.export import combined_export, individual_export
+    from pathlib import Path
 
-    parser = argparse.ArgumentParser(description="Compile neganuki scanner parts")
-    parser.add_argument(
-        "--mode",
-        choices=["combined", "individual"],
-        default="combined",
-        help="Export mode: combined (single file) or individual (one file per part)",
+    from print_labo.utils.compile_cli import run_compile_cli
+
+    run_compile_cli(
+        graphs=ALL_PARTS,
+        description="Compile neganuki scanner setup",
+        source_script=Path(__file__).resolve(),
+        default_output="neganuki_scanner.py",
+        default_output_dir="neganuki_scanner",
+        watch_base_dir=Path(__file__).resolve().parent,
     )
-    parser.add_argument(
-        "--output",
-        default=None,
-        help="Output file (combined) or directory (individual)",
-    )
-    args = parser.parse_args()
-
-    if args.mode == "combined":
-        out = args.output or "neganuki_scanner_gen.py"
-        path = combined_export(ALL_PARTS, out)
-        print(f"Generated {len(ALL_PARTS)} parts in {path} ({path.stat().st_size // 1024} KB)")
-    else:
-        out = args.output or "neganuki_scanner_gen"
-        written = individual_export(ALL_PARTS, out)
-        print(f"Generated {len(written)} files in {out}/")
-
