@@ -264,18 +264,76 @@ def create_board_slice():
                 positions.append((x + board_l/6, y))
 
         
-        return [peg_y | place(x, y, 5) for x, y in positions]
+        return [peg_y | place(x, y, 4.95 + CLR) for x, y in positions]
+
+    def create_joint_hole(CLR=0):
+        joint_1 = cube(10 + CLR, 5 + CLR, 10 + CLR, "joint_1")
+        joint_2 = cube(9 + CLR, 5 + CLR, 2 + CLR, "joint_2")
+        joint_3 = cube(2 + CLR, 5 + CLR, 9 + CLR, "joint_3")
+        joint_4 = cube(6 + CLR, 5 + CLR, 19 + CLR, "joint_4")
+        joint_5 = cube(19 + CLR, 5 + CLR, 6 + CLR, "joint_5")
+  
+
+        joint = union([
+            joint_1,
+            joint_2 | place(0, 0, 8.5),
+            joint_2 | place(0, 0, -8.5),
+            joint_3 | place(-8.5, 0, 0),
+            joint_3 | place(8.5, 0, 0),
+            joint_4 ,
+            joint_5 ,    
+        ])
+
+        return joint
+    
+    def create_joint(CLR=-CLEARANCE):
+        joint_1 = cube(10 + CLR, 5 + CLR, 10 + CLR, "joint_1")
+        joint_4 = cube(6 + CLR, 5 + CLR, 19 + CLR, "joint_4")
+        joint_5 = cube(19 + CLR, 5 + CLR, 6 + CLR, "joint_5")
+        joint_6 = cube(8 + CLR, 5 + CLR, 2 + CLR, "joint_6")
+        joint_7 = cube(2 + CLR, 5 + CLR, 8 + CLR, "joint_7")
+
+        joint = union([
+            joint_1,
+            joint_4,
+            joint_5,
+            joint_6 | place(0, 0, 8.5),
+            joint_6 | place(0, 0, -8.5),
+            joint_7 | place(-8.5, 0, 0),
+            joint_7 | place(8.5, 0, 0),
+        ])
+        
+        h_joint_4 = cube(2 + CLR, 5 + CLR, 6 + CLR, "h_joint_4")
+        h_joint_cyl = cylinder(1 + CLR, 5 + CLR, "h_joint_4_1") | rotate(90, 0, 0)
+        h_joint_5 = cube(6 + CLR, 5 + CLR, 2 + CLR, "h_joint_5")
+        
+        joint = difference(joint, [
+            h_joint_4 | place(0, 0, 8), 
+            h_joint_4 | place(0, 0, -8),
+            h_joint_cyl | place(0, 0, 5),
+            h_joint_cyl | place(0, 0, -5),
+            h_joint_5 | place(-8, 0, 0),
+            h_joint_5 | place(8, 0, 0),
+            h_joint_cyl | place(-5, 0, 0),
+            h_joint_cyl | place(5, 0, 0)
+        ])
+ 
+        
+        return joint
+
 
     board = difference(board, [
         x_cut,
         y_cut_1,
         y_cut_2,
-        *generate_peg_positions(CLR=CLEARANCE)
+        *generate_peg_positions(CLR=CLEARANCE),
+        create_joint_hole(CLR=CLEARANCE) | place(0, board_side/2 - 5, 0),
     ])
 
     board = union([
         board,
-        *generate_peg_positions(CLR=0)
+        *generate_peg_positions(CLR=0),
+        create_joint(CLR=0) | place(0, board_side/2 - 5, 0),
     ])
 
     board = difference(board, [
@@ -287,6 +345,7 @@ def create_board_slice():
         cylinder(3, 20, "cylinder_0_0") | place(-board_side/2 + 40, board_side/2 - 40, -28),
         
     ])
+    
 
     return board
 
@@ -303,15 +362,15 @@ def create_board():
 
 
 ALL_PARTS = [
-    create_motor_assembly_graph(),
-    create_motor_mount_plate_graph(),
-    create_reversed_motor_assembly_graph(),
-    create_motor_mount_with_arm_graph(),
-    create_shaft_coupler_graph(),
-    create_linkage_rod_graph(),
-    create_shaft_coupler_graph(
-        with_ball_joint=True, name="ball_joint_coupler"),
-    create_linkage_rod_graph(name="rear_linkage_rod", y=128, z=-2.5),
+    # create_motor_assembly_graph(),
+    # create_motor_mount_plate_graph(),
+    # create_reversed_motor_assembly_graph(),
+    # create_motor_mount_with_arm_graph(),
+    # create_shaft_coupler_graph(),
+    # create_linkage_rod_graph(),
+    # create_shaft_coupler_graph(
+    #     with_ball_joint=True, name="ball_joint_coupler"),
+    # create_linkage_rod_graph(name="rear_linkage_rod", y=128, z=-2.5),
     create_board(),
 ]
 
