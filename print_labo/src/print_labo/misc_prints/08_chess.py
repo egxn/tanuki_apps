@@ -157,37 +157,57 @@ def create_linkage_rod_graph(name: str = "linkage_rod", y: float = 40, z: float 
     return make_graph(name, leg)
 
 
-def create_surfaces(CLR_Z=0, CLR_X=0, CLR_Y=0):
-    board_margin = 20
-    l_1 = 300 + board_margin - 3
-    l_2 = 300 + board_margin - 3
+def create_pla_board(CLR=0):
+    board_l = 161.5
+    joint_l = 10
 
-    board_z = 0.5 + CLR_Z
-    motor_z = 3 + CLR_Z
+    def create_joint(CLR=0, rotate_joint=False):
+        joint = cube(joint_l + CLR, joint_l + CLR, 1 + CLR, "cube")
+        joint_cyl = cylinder(2 + CLR, 1 + CLR, "cyl")
 
-    board = cube(l_1, l_2, board_z, "board") | place(0, 0, 30)
-    motor_base = cube(l_1, l_2, motor_z, "motor_base")
+        pos = (-joint_l/2, joint_l/2,
+               0) if not rotate_joint else (joint_l/2, -joint_l/2, 0)
 
-    motor_base = union([
-        motor_base,
-        cube(l_1 + 6, 30 + CLR_Y, motor_z, "rib_1") | place(0,  100, 0),
-        cube(l_1 + 6, 30 + CLR_Y, motor_z, "rib_1") | place(0, -100, 0),
-        cube(l_1 + 6, 30 + CLR_Y, motor_z, "rib_1") | place(0,  33.3, 0),
-        cube(l_1 + 6, 30 + CLR_Y, motor_z, "rib_1") | place(0, -33.3, 0),
+        joint = union([
+            joint,
+            joint_cyl | place(joint_l/2, joint_l/2, 0),
+            joint_cyl | place(*pos),
+        ])
 
-        cube(30 + CLR_Y, l_1 + 6, motor_z, "rib_1") | place(100,  0, 0),
-        cube(30 + CLR_Y, l_1 + 6, motor_z, "rib_1") | place(-100,  0, 0),
-        cube(30 + CLR_Y, l_1 + 6, motor_z, "rib_1") | place(33.3,  0, 0),
-        cube(30 + CLR_Y, l_1 + 6, motor_z, "rib_1") | place(-33.3,  0, 0)
+        return joint
+
+    board = cube(board_l + CLR, board_l + CLR, 1 + CLR, "pla_board")
+
+    board = difference(board, [
+        create_joint(CLEARANCE) | place(board_l/4, -board_l/2 + joint_l/2, 0),
+        create_joint(CLEARANCE) | place(-board_l/4, -board_l/2 + joint_l/2, 0),
     ])
 
-    surfaces = union([
+    wall_joint = union([
+        cube(6, 30, 6, "wall_joint"),
+        cube(9, 30 + CLR, 3 + CLR, "wall_joint") | place(-1.5, 0, -4.5),
+    ])
+
+    board = union([
         board,
-        motor_base | place(0, 0, -11),
-        motor_base | place(0, 0, -20)
+        create_joint(rotate_joint=True) | place(
+            board_l/2 + joint_l/2, board_l/4, 0),
+        create_joint(rotate_joint=True) | place(
+            board_l/2 + joint_l/2, -board_l/4, 0),
+        wall_joint | place(-board_l/2 + 6, board_l/4, -3),
+        wall_joint | place(-board_l/2 + 6, -board_l/4, -3),
+        wall_joint | rotate(0, 0, -90) | place(board_l/4, board_l/2 - 6, -3),
+        wall_joint | rotate(0, 0, -90) | place(-board_l/4, board_l/2 - 6, -3)
     ])
 
-    return surfaces
+    board = join([
+        board | place(-board_l/2, board_l/2, 27.5),
+        board | rotate(0, 0, -90) | place(board_l/2, board_l/2, 27.5),
+        board | rotate(0, 0, -180) | place(board_l/2, -board_l/2, 27.5),
+        board | rotate(0, 0, -270) | place(-board_l/2, -board_l/2, 27.5),
+    ])
+
+    return board
 
 
 def create_chess_squares():
@@ -207,101 +227,106 @@ def create_chess_squares():
     return chess_squares
 
 
-def create_board():
-    with model("board") as context:
-        surfaces = create_surfaces()
-        chess_squares = create_chess_squares()
+def create_board_slice():
+    board_l = 300
+    board_margin = 20
+    board_side = board_l + board_margin
+    board_h = 40
 
-        chess_squares = union(chess_squares) | place(-150, -150, 0)
-        surfaces = difference(surfaces, [chess_squares])
+    board = cube(board_side, board_side, board_h, "board")
+    h_board = cube(board_l, board_l, board_h - 4, "h_board") | place(0, 0, 1)
+    board = difference(board, [h_board])
 
-        output(surfaces)
+    x_cut = cube(330, 330, 0.1, "x_cut")
+    y_cut_1 = cube(0.1, 330, 60, "y_cut_1")
+    y_cut_2 = cube(330, 0.1, 60, "y_cut_2")
+    
+    def create_peg_y(CLR=0):
+        peg_y = cylinder(3 + CLR, 10 + CLR, "peg_y", vertices=6)
+        peg_rib_1 = cube(8 + CLR, 1 + CLR, 4 + CLR, "peg_rib") | place(0, 0, -3)
+        peg_rib_2 = cube(1 + CLR, 8 + CLR, 4 + CLR, "peg_rib") | place(0, 0, -3)
+        peg_y = union([peg_y, peg_rib_1, peg_rib_2])
+        return peg_y
 
-    return context.graph
+    def generate_peg_positions(CLR=0):
+        positions = []
+        peg_y = create_peg_y(CLR)
+        for x in [-board_side/2 + 5, board_side/2 - 5]:
+            for y in [-board_l/4, board_l/4]:
+                positions.append((x, y))
+                positions.append((x, y + board_l/6))
+                positions.append((x, y - board_l/6))
 
+        for y in [-board_side/2 + 5, board_side/2 - 5]:
+            for x in [-board_l/4, board_l/4]:
+                positions.append((x, y))
+                positions.append((x - board_l/6, y))
+                positions.append((x + board_l/6, y))
 
-def generate_walls(CLR=0):
-    surfaces = create_surfaces(CLEARANCE, CLEARANCE, CLEARANCE)
-    wall_y = cube(3 + CLR, 300 + CLR, 52 + CLR, "wall_y")
-    wall_x = cube(300 + CLR, 3 + CLR, 52 + CLR, "wall_x")
+        
+        return [peg_y | place(x, y, 5) for x, y in positions]
 
-    wall_y_1 = wall_y | place(160, 0,  4)
-    wall_y_2 = wall_y | place(-160, 0, 4)
-    wall_y_3 = cube(3 + CLR, 310 + CLR, 20 + CLR, "wall_y") | place(160, 0, 4)
-    wall_y_4 = cube(3 + CLR, 310 + CLR, 20 + CLR, "wall_y") | place(-160, 0, 4)
-
-    wall_x_1 = wall_x | place(0, 160,  4)
-    wall_x_2 = wall_x | place(0, -160, 4)
-    wall_x_3 = cube(310 + CLR, 3 + CLR, 20 + CLR, "wall_y") | place(0, 160,  4)
-    wall_x_4 = cube(310 + CLR, 3 + CLR, 20 + CLR, "wall_y") | place(0, -160, 4)
-
-    return union([
-        difference(wall_x_1, [surfaces]),
-        difference(wall_x_2, [surfaces]),
-        difference(wall_y_1, [surfaces]),
-        difference(wall_y_2, [surfaces]),
-        wall_y_3,
-        wall_y_4,
-        wall_x_3,
-        wall_x_4
+    board = difference(board, [
+        x_cut,
+        y_cut_1,
+        y_cut_2,
+        *generate_peg_positions(CLR=CLEARANCE)
     ])
 
+    board = union([
+        board,
+        *generate_peg_positions(CLR=0)
+    ])
 
-def create_walls():
-    with model("walls") as context:
-        walls = generate_walls()
-        output(walls)
-    return context.graph
+    board = difference(board, [
+        cylinder(2, 40, "cylinder_0_0") | place(17.5, 0, -10),
+        cylinder(2, 40, "cylinder_0_0") | place(-17.5, 0, -10),
+        cylinder(3, 20, "cylinder_0_0") | place(board_side/2 - 40, board_side/2 - 40, -28),
+        cylinder(3, 20, "cylinder_0_0") | place(-board_side/2 + 40, -board_side/2 + 40, -28),
+        cylinder(3, 20, "cylinder_0_0") | place(board_side/2 - 40, -board_side/2 + 40, -28),
+        cylinder(3, 20, "cylinder_0_0") | place(-board_side/2 + 40, board_side/2 - 40, -28),
+        
+    ])
+
+    return board
 
 
-def create_corners():
-    with model("corners") as context:
-        board_margin = 20
-        surfaces = create_surfaces(CLEARANCE)
-        l_1 = 300 + board_margin
-        l_2 = 300 + board_margin
+def create_board():
+    with model("board") as context:
+        chess_squares = create_chess_squares()
+        board = create_board_slice() | place(0, 0, 7.5)
+        # chess_squares = union(chess_squares) | place(-board_side/2, -board_side/2, 0)
 
-        corner_position_x = l_1 / 2 - 5
-        corner_position_y = l_2 / 2 - 5
-        corner = cube(30, 30, 54, "corner")
-        corners = union([
-            corner | place(corner_position_x, corner_position_y,  4),
-            corner | place(corner_position_x, -corner_position_y, 4),
-            corner | place(-corner_position_x, -corner_position_y, 4),
-            corner | place(-corner_position_x, corner_position_y,  4),
-        ])
+        output(board)
 
-        walls = generate_walls(CLEARANCE)
-        corners = difference(corners, [surfaces, walls])
-
-        output(corners)
     return context.graph
 
 
 ALL_PARTS = [
-    # create_motor_assembly_graph(),
-    # create_motor_mount_plate_graph(),
-    # create_reversed_motor_assembly_graph(),
-    # create_motor_mount_with_arm_graph(),
-    # create_shaft_coupler_graph(),
-    # create_linkage_rod_graph(),
-    # create_shaft_coupler_graph(with_ball_joint=True, name="ball_joint_coupler"),
-    # create_linkage_rod_graph(name="rear_linkage_rod", y=128, z=-2.5),
-    create_corners(),
+    create_motor_assembly_graph(),
+    create_motor_mount_plate_graph(),
+    create_reversed_motor_assembly_graph(),
+    create_motor_mount_with_arm_graph(),
+    create_shaft_coupler_graph(),
+    create_linkage_rod_graph(),
+    create_shaft_coupler_graph(
+        with_ball_joint=True, name="ball_joint_coupler"),
+    create_linkage_rod_graph(name="rear_linkage_rod", y=128, z=-2.5),
     create_board(),
-    create_walls(),
 ]
 
 
 if __name__ == "__main__":
     from pathlib import Path
+
     from print_labo.utils.compile_cli import run_compile_cli
 
-    run_compile_cli(
-        graphs=ALL_PARTS,
-        description="Compile chess-board mechanical parts",
-        source_script=Path(__file__).resolve(),
-        default_output="chess.py",
-        default_output_dir="chess_parts",
-        watch_base_dir=Path(__file__).resolve().parent,
-    )
+
+run_compile_cli(
+    graphs=ALL_PARTS,
+    description="Compile chess-board mechanical parts",
+    source_script=Path(__file__).resolve(),
+    default_output="chess.py",
+    default_output_dir="chess_parts",
+    watch_base_dir=Path(__file__).resolve().parent,
+)
